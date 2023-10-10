@@ -55,7 +55,7 @@ The main experiment takes around 22 minutes wall-clock time on an M1 Max MacBook
 python plot.py
 ```
 
-5. Export results to host machine
+5. Export results to host machine. (Below steps all happens on your host machine's terminal, not the container's terminal)
 
     a. First get the name of the container running under the NAMES column:
     ```
@@ -70,6 +70,8 @@ python plot.py
     ```
     docker cp peaceful_hertz:/workspace/figures ~/Downloads/figures
     ```
+
+    You should see that the two figures look similar to Figure 16 on page 19 of the paper.
 
     c. You can also copy the generated result spread sheets to your host machine for inspection.
     ```
