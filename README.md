@@ -41,12 +41,6 @@ tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.lastus
 ```
 make main
 ```
-Ignore warnings about rustfmt not installed. It is not needed for the experiment.
-```
-error: 'rustfmt' is not installed for the toolchain '1.73.0-aarch64-unknown-linux-gnu'
-To install, run `rustup component add rustfmt`
-Failed to run rustfmt: Internal rustfmt error (non-fatal, continuing)
-```
 
 The main experiment takes around 22 minutes wall-clock time on an M1 Max MacBook Pro.
 

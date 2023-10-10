@@ -32,8 +32,8 @@ ENV GOROOT=/usr/local/go
 ENV GOPATH=$HOME/go
 ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-# Install bindgen
-RUN cargo install bindgen-cli
+# Install rustfmt and bindgen
+RUN rustup component add rustfmt && cargo install bindgen-cli
 
 # Copy everything from the current directory to the workspace
 COPY . /workspace
