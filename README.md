@@ -2,7 +2,12 @@
 If you are using Docker Desktop, change the allocated disk space to **200GB** in the Docker preferences (Preferences -> Resources -> Disk).
 
 # Run main experiment
-1. Unzip test folder
+1. Pull and run the docker container for arborist:
+```
+docker run -ti alienkevin/arborist
+```
+
+2. Unzip test folder
 ```
 mkdir test
 tar -I pigz -xf test.tar.gz --directory tests
@@ -15,17 +20,17 @@ tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.lastus
 ...
 ```
 
-2. Run the main experiment
+3. Run the main experiment
 ```
 make main
 ```
 
-3. Plot the experiment results
+4. Plot the experiment results
 ```
 python plot.py
 ```
 
-4. Export results to host machine
+5. Export results to host machine
 
     a. First get the name of the container running under the NAMES column:
     ```
