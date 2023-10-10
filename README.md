@@ -25,34 +25,24 @@ make main
 python plot.py
 ```
 
-4. Export the plots to host machine
+4. Export results to host machine
 
-First get the name of the container running under the NAMES column:
-```
-$ docker ps
-CONTAINER ID   IMAGE      COMMAND       CREATED          STATUS          PORTS     NAMES
-e705b63f2247   arborist   "/bin/bash"   37 minutes ago   Up 37 minutes             peaceful_hertz
-```
-Here the name is `peaceful_hertz`.
+    a. First get the name of the container running under the NAMES column:
+    ```
+    $ docker ps
+    CONTAINER ID   IMAGE      COMMAND       CREATED          STATUS          PORTS     NAMES
+    e705b63f2247   arborist   "/bin/bash"   37 minutes ago   Up 37 minutes             peaceful_hertz
+    ```
+    Here the name is `peaceful_hertz`.
 
-Then, copy the generated figures from the container to your host machine.
-Here, we show how to copy the figures to the Downloads folder.
-```
-docker cp peaceful_hertz:/workspace/figures ~/Downloads/figures
-```
+    b. Then, copy the generated figures from the container to your host machine.
+    Here, we show how to copy the figures to the Downloads folder.
+    ```
+    docker cp peaceful_hertz:/workspace/figures ~/Downloads/figures
+    ```
 
-# Zip benchmarks for Docker
-```
-tar -c --use-compress-program=pigz -f test.tar.gz tests
-```
+    c. You can also copy the generated result spread sheets to your host machine for inspection.
+    ```
+    docker cp peaceful_hertz:/workspace/benchmark_summary.csv ~/Downloads/benchmark_summary.csv
+    ```
 
-# Building Docker for Multi-Platform
-
-```
-docker buildx build --load --platform linux/amd64,linux/arm64 -t arborist .
-```
-
-# Build for mac
-```
-docker buildx build --load --platform linux/arm64 -t arborist .
-```
