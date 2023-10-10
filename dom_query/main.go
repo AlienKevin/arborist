@@ -21,15 +21,15 @@ var doc *html.Node
 
 //export SetupBenchmark
 func SetupBenchmark(name string) {
-	debug.SetGCPercent(100)
-	runtime.GC()
+	// debug.SetGCPercent(100)
+	// runtime.GC()
 
 	fmt.Println("SetupBenchmark: " + name)
 	benchmarkName = name
 
 	htmlquery.DisableSelectorCache = true
 
-	debug.SetGCPercent(-1)
+	// debug.SetGCPercent(-1)
 }
 
 //export LoadDoc
