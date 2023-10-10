@@ -36,22 +36,6 @@ inherits = "release"
 lto = "fat"
 codegen-units = 1
 
-[[bin]]
-name = "profile"
-path = "tests/benchmarks/profile.rs"
-
-[[test]]
-name = "experiment"
-path = "tests/benchmarks/experiment.rs"
-
-[[test]]
-name = "scale_experiment"
-path = "tests/benchmarks/scale_experiment.rs"
-
-[[test]]
-name = "sparsity_experiment"
-path = "tests/benchmarks/sparsity_experiment.rs"
-
 [[test]]
 name = "main"
 path = "tests/benchmarks/main.rs"
