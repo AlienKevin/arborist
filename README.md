@@ -48,6 +48,8 @@ To install, run `rustup component add rustfmt`
 Failed to run rustfmt: Internal rustfmt error (non-fatal, continuing)
 ```
 
+The main experiment takes around 22 minutes wall-clock time on an M1 Max MacBook Pro.
+
 4. Plot the experiment results
 ```
 python plot.py
