@@ -42,7 +42,7 @@ tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.lastus
 make main
 ```
 
-The main experiment takes around 22 minutes wall-clock time on an M1 Max MacBook Pro.
+The main experiment takes around 40 minutes wall-clock time on an M1 Max MacBook Pro.
 
 4. Plot the experiment results
 ```
