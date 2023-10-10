@@ -9,9 +9,12 @@ We collected 131 real-world benchmarks on web-automation tasks, with each benchm
 * doms/: the folder contain all website dom indexed from the starting website dom before applying the first action to the last website dom after applying the last action.
 
 # Evaluation Instructions
+We packaged all code and data into a cross-platform Docker container that works for both x86 and arm host machines.
 
-## Configure Docker Desktop
-If you are using Docker Desktop, change the allocated disk space to **200GB** in the Docker preferences (Preferences -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors.
+## Setup Docker Desktop
+1. Install Docker Desktop if you haven't already from https://www.docker.com/products/docker-desktop/
+
+2. Change the allocated disk space to **200GB** in the preferences (Preferences -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors.
 
 ## Run main experiment
 1. Pull and run the docker container for arborist:
