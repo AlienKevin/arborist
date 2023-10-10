@@ -13,3 +13,16 @@ docker buildx build --push --platform linux/amd64,linux/arm64 -t alienkevin/arbo
 ```
 docker buildx build --load --platform linux/arm64 -t arborist .
 ```
+
+# Convert README_source.md to PDF
+1. Install pandoc (steps taken from https://gist.github.com/dcchambers/9761c71880114cc604c902b30b2e06c8?permalink_comment_id=4533368#gistcomment-4533368)
+```
+brew install pandoc
+brew install basictex --cask
+eval "$(/usr/libexec/path_helper)"
+```
+
+2. Generate PDF
+```
+pandoc README_source.md -o README.pdf -V geometry:margin=1in
+```

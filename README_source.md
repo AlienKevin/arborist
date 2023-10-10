@@ -3,10 +3,11 @@ In this artifact, we included the implementation of our web automation program s
 
 # Benchmarks
 We collected 131 real-world benchmarks on web-automation tasks, with each benchmark stored in a folder with name WxTx. Each benchmark contains the following files/folder:
-* *.program: the ground truth web automation program.
-* script.py: the selenium program used to record the action trace and doms of the simulated user interactions on the doms.
-* trace.json: the json file contains a list of actions for completing the benchmark task. Each action contains its type, corresponding selectors, and the data if applicable.
-* doms/: the folder contain all website dom indexed from the starting website dom before applying the first action to the last website dom after applying the last action.
+
+- *.program: the ground truth web automation program.
+- script.py: the selenium program used to record the action trace and doms of the simulated user interactions on the doms.
+- trace.json: the json file contains a list of actions for completing the benchmark task. Each action contains its type, corresponding selectors, and the data if applicable.
+- doms/: the folder contain all website dom indexed from the starting website dom before applying the first action to the last website dom after applying the last action.
 
 # Evaluation Instructions
 We packaged all code and data into a cross-platform Docker container that works for both x86 and arm host machines.
@@ -14,7 +15,7 @@ We packaged all code and data into a cross-platform Docker container that works 
 ## Setup Docker Desktop
 1. Install Docker Desktop if you haven't already from https://www.docker.com/products/docker-desktop/
 
-2. Change the allocated disk space to **200GB** in the preferences (Settings -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors. See the below screenshot for steps:
+2. Change the allocated disk space to **200GB** in the preferences (Settings -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors. See Figure 1 on the next page for the steps.
 
 ![Docker Desktop Configuration](media/configure-docker-desktop.png)
 
