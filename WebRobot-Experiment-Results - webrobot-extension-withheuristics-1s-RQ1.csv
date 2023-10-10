@@ -1,0 +1,2885 @@
+benchmark ID,longest time,final program,intended?,INPLDI?
+W111T1,126,"ForEach v0 in GetArray(.names) do {
+  SendData //div[@class='d-flex justify-space-between align-center text-field-wrapper solo px-3']/input <v0>
+  Click //div[@class='col-2']/button[@id='wp-search']
+  ScrapeLink //div[@class='_2Lha']//a[@class='pos-rl cs-p _2mGd '][1]
+  GoBack
+ }",TRUE,Y
+W115T1,6,"ForEach v0 in Descendants(, div[@class='body'], 0) do {
+  ScrapeText <v0>/a[@class='lo']
+ }",TRUE,Y
+W125T1,1000,"ForEach v0 in GetArray(.phone_numbers) do {
+  SendData //div[@class='form-col mid-col'][1]//input[@name='rufnummern_rufnummer'] <v0>
+  Click //div[@class='form-col mid-col'][2]/button[@name='btn_rufnummern_suche']
+  ScrapeText //article[@class='accordion-item clearfix']//td[1]
+  ScrapeText //article[@class='accordion-item clearfix']//td[2]
+ }",TRUE,Y
+W127T1,1000,"ForEach v0 in GetArray(.companies) do {
+  SendData //form[@id='companySearchForm']/input[@id='company'] <v0>
+  Click //form[@id='companySearchForm']/input[@id='search_button']
+  ScrapeText //div[@class='mailer'][1]
+  ScrapeText //div[@class='mailer'][2]
+  GoBack
+ }",TRUE,Y
+W138T1,1000,"While true do {
+  ForEach v0 in Descendants(, td[@class='tl'], 0) do {
+  Click <v0>/a[@itemprop='url']
+  ExtractURL
+  GoBack
+  }
+  if valid(//td[@class='next']/a[@class='enabled'][1]) {
+  Click //td[@class='next']/a[@class='enabled'][1]
+  }
+ }",TRUE,Y
+W141T1,596,"Click //body/form/div[12]/div[1]/div[5]/div[2]/div[3]/div[1]/div/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div/table/tbody/tr[1]/td/div/p[2]/select
+ Click //body/form/div[12]/div[1]/div[5]/div[2]/div[3]/div[1]/div/div[2]/div[1]/div[1]/div/div/div[2]/div[1]/div/table/tbody/tr[1]/td/div/p[2]/select/option[3]
+ ForEach v0 in GetArray(.numbers) do {
+  SendData //span[@class='search-key']/input[@name='ctl00$ctl43$g_d30f33ca_a5a7_4f69_bb21_cd4abc25ea12$ctl00$txtSearch'] <v0>
+  Click //p[@class='search-btn']/input[@name='ctl00$ctl43$g_d30f33ca_a5a7_4f69_bb21_cd4abc25ea12$ctl00$btnSearch']
+  Download //a[@id='ctl00_ctl43_g_d30f33ca_a5a7_4f69_bb21_cd4abc25ea12_ctl00_gvAssessorRollTax_ctl02_chkProperty']/img
+ }",TRUE,Y
+W144T1,924,"SendKeys //body/div[1]/div[2]/nav/div[2]/div/div[1]/div/div/fieldset/input[1] New York
+ Click //body/div[1]/div[2]/nav/div[2]/div/div[1]/div/div/fieldset/input[2]
+ While true do {
+  ForEach v0 in Descendants(, div[@class='placardDetails'], 0) do {
+  ForEach v0 in Children(<v0>, p, 0) do {
+  ScrapeText <v0>
+  }
+  }
+  if valid(//div[@id='paging-controls']/a[@class='fx-pagination fx-next']) {
+  Click //div[@id='paging-controls']/a[@class='fx-pagination fx-next']
+  }
+ }",TRUE,Y
+W146T1,1000,"ForEach v0 in GetArray(.queries) do {
+  SendData //div[@class='d1dlne'][2]/input[@class='Ax4B8 ZAGvjd'] <v0>
+  Click //div[@class='mLoZRc']//div[@class='onRPD Ps6EPc']
+  ScrapeText //div[@class='kf1m0']/div[@class='YMlKec fxKbKc']
+  GoBack
+ }",TRUE,Y
+W148T1,34,"ForEach v0 in Descendants(//div[@class='innertube'][2], a, 0) do {
+  Click <v0>
+  ScrapeText //div[@class='innertube'][2]/p[1]
+  ScrapeText //div[@class='innertube'][2]/p[3]
+  GoBack
+ }",TRUE,Y
+W149T1,17,"ForEach v0 in Descendants(//table[@class='basic link-rows'], tr[@class='link-row'], 0) do {
+  ScrapeText <v0>
+ }",TRUE,Y
+W14T1,10,"ForEach v0 in Descendants(, div[@class='VideoSearchCard__videoImageWrapper___zPMT9'], 0) do {
+  ScrapeLink <v0>/a
+ }",TRUE,Y
+W157T1,153,"ForEach v0 in GetArray(.inputs) do {
+  SendData //div[@class='search-form__input-wrapper'][2]/input[@name='query'] <v0>
+  Click //div[@class='search-form__container'][2]/button[@class='js_search-form__button search-form__button btn btn--large btn--red']
+  ScrapeText //table[@class='instrument-table js_tab-menu__tab-target js_instrument-table']//td[6]
+  ScrapeText //table[@class='instrument-table js_tab-menu__tab-target js_instrument-table']//td[8]
+  GoBack
+ }",TRUE,Y
+W162T1,812,"ForEach v0 in Descendants(//ul[@class='tabs'], a, 0) do {
+  Click <v0>
+  ForEach v0 in Descendants(, tr[@class='top3'], 0) do {
+  ScrapeText <v0>/td[@class='verstrekker']
+  ScrapeText <v0>/td[@class='rente']
+  }
+ }",TRUE,Y
+W176T1,55,"ForEach v0 in Children(//body/div[4]/div/div[2]/div[1]/div/div/div/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[1]/a
+  ScrapeText <v0>/td[2]
+  Click <v0>/td[1]/a
+  ScrapeText //tr[@class='occlss-table__row'][3]/td[@class='occlss-table__cell']
+  ScrapeText //td[@class='occlss-table__cell'][4]/a
+  GoBack
+ }",TRUE,Y
+W177T1,353,"SendKeys //body/div[1]/section/div/section/center/section/div/div[3]/input 5316 53rd AVE E
+ Click //body/div[1]/section/div/section/center/section/div/div[4]/ul/li/input
+ ForEach v0 in GetArray(.addresses) do {
+  SendData //div[@class='4u 12u$(small)']/input[@id='locationSearchTextBox'] <v0>
+  Click //ul[@class='actions'][1]//input[@id='locationSearchButton']
+  ScrapeText //div[@class='3u 5u(small)']/input[@id='distance']
+  Click //div[@class='2u 4u(small)'][3]/input[@value='Clear Last Point']
+ }",TRUE,Y
+W178T1,279,"While true do {
+  ForEach v0 in Descendants(, div[@class='col-xs-12'], 0) do {
+  ScrapeText <v0>/p[2]
+  }
+  if valid(//div[@class='entry-content']//a[@class='next page-numbers pull-right']) {
+  Click //div[@class='entry-content']//a[@class='next page-numbers pull-right']
+  }
+ }",TRUE,Y
+W188T1,22,"ForEach v0 in GetArray(.nums) do {
+  SendData //div[@id='searchBox']//input[@name='keywords'] <v0>
+  Click //div[@id='searchBox']//input[@class='inpB']
+  ExtractURL
+ }",TRUE,Y
+W189T1,118,"While true do {
+  ForEach v0 in Children(//body/div[1]/div/div[1]/div[1]/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[1]/a/div[1]
+  ScrapeText <v0>/td[2]
+  ScrapeText <v0>/td[3]
+  }
+  if valid(//nav[@aria-label='Pagination Navigation']//a[@aria-label='Next &raquo;']) {
+  Click //nav[@aria-label='Pagination Navigation']//a[@aria-label='Next &raquo;']
+  }
+ }",TRUE,Y
+W18T1,485,"ForEach v0 in GetArray(.names) do {
+  SendData //td[@class='border-none'][2]/input[@id='FreeText'] <v0>
+  Click //td[@class='border-none'][3]/button[@id='btn_quicksearch']
+  ScrapeText //tr[@class='rowASRLodd odd']//a
+  Click //tr[@class='rowASRLodd odd']//a
+  ScrapeText //div[@id='moduleMemberDetail']//p[@class='nostyle'][3]
+  GoBack
+  GoBack
+ }",TRUE,Y
+W190T1,181,"ForEach v0 in GetArray(.ann) do {
+  SendData //div[@class='input-group'][2]/input[@name='basicsearchterm'] <v0>
+  Click //span[@class='input-group-btn'][2]/button[@title='Search']
+  ScrapeText //dl[@class='dl-xs-horizontal']/dd[@class='ng-binding'][1]
+  ScrapeText //div[@class='col-sm-4'][1]/address[@class='ng-binding']
+  GoBack
+ }",TRUE,Y
+W204T1,577,"While true do {
+  ForEach v0 in Descendants(, a[@class='teaserImage'], 0) do {
+  Download <v0>/img
+  }
+  if valid(//body/form/div[2]/div[4]/div/div[2]/div/div/div/div/div[3]/ul/li[3]/a) {
+  Click //body/form/div[2]/div[4]/div/div[2]/div/div/div/div/div[3]/ul/li[3]/a
+  }
+ }",TRUE,Y
+W205T1,770,"Click //body/div/div/div[2]/div[2]/main/div/form/fieldset/select[2]/option[2]
+ ForEach v0 in Children(//select[@id='stateSelector'], option, 1) do {
+  Click <v0>
+  Click //form[@id='searchSubmit']/button[@id='submitsearch']
+  ForEach v0 in Children(//body/div/div/div[2]/div[2]/main/div/table/tbody, tr, 1) do {
+  ScrapeText <v0>/td[2]/p
+  ScrapeText <v0>/td[5]/p
+  }
+ }",TRUE,Y
+W218T1,184,"While true do {
+  ForEach v0 in Descendants(, div[@class='mobile-content-container'], 0) do {
+  ForEach v0 in Descendants(<v0>, a, 0) do {
+  ScrapeText <v0>
+  }
+  }
+  if valid(//li[@class='pagination-list-item next-results']/a[@class='next']) {
+  Click //li[@class='pagination-list-item next-results']/a[@class='next']
+  }
+ }",TRUE,Y
+W223T1,893,"While true do {
+  ForEach v0 in Descendants(, div[@data-label='property-card'], 0) do {
+  ScrapeText <v0>//span[@data-label='pc-price']
+  ScrapeText <v0>//a[@data-testid='property-anchor']
+  }
+  if valid(//div[@aria-label='pagination']/a[@aria-label='Go to next page']) {
+  Click //div[@aria-label='pagination']/a[@aria-label='Go to next page']
+  }
+ }",TRUE,Y
+W226T1,653,"ForEach v0 in Children(//select[@class='dropdown module_options-select'], option, 0) do {
+  Click <v0>
+  ForEach v0 in Descendants(, div[@class='module_item'], 0) do {
+  ScrapeLink <v0>//a[@class='module_headline-link']
+  ScrapeText <v0>/div[@class='module_date-time']
+  }
+ }",TRUE,Y
+W228T1,1000,"ForEach v0 in Descendants(, div[@class='ups-table fuel-surcharge'], 0) do {
+  ScrapeText <v0>//th[1]
+  ForEach v0 in Descendants(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }",TRUE,Y
+W232T1,664,"While true do {
+  ForEach v0 in Descendants(, div[@class='thumbnail-item thumbnail-sm thumbnail-logo ripple'], 0) do {
+  ScrapeText <v0>//span[@class='ad__price']
+  }
+  if valid(//div[@class='btn-group btn-group-justified'][1]/a[@class='btn btn-primary']) {
+  Click //div[@class='btn-group btn-group-justified'][1]/a[@class='btn btn-primary']
+  }
+ }",TRUE,Y
+W233T1,42,"ForEach v0 in GetArray(.ppins) do {
+  SendData //form[@name='form1']//input[@name='ppin'] <v0>
+  Click //form[@name='form1']//input[@name='Submit']
+  Click //span[@class='text']//a[1]
+  ScrapeText //div[@id='content']//td[6]
+  GoBack
+  GoBack
+ }",TRUE,Y
+W237T1,984,"ForEach v0 in GetArray(.keywords) do {
+  SendData //div[@class='textboxfocus']/input[@name='ctl00$ctl00$MainContent$Content$SearchControls$CardSearchBoxParent$CardSearchBox'] <v0>
+  Click //div[@class='searchsubmit']/input[@name='ctl00$ctl00$MainContent$Content$SearchControls$searchSubmitButton']
+  ForEach v1 in Descendants(, td[@class='leftCol'], 0) do {
+  Download <v1>//img
+  }
+  GoBack
+ }",TRUE,Y
+W238T1,7,"ForEach v0 in Descendants(, div[@class='itemlist2'], 0) do {
+  ScrapeText <v0>//strong[1]
+  Click <v0>/div[@class='itemlist2_description']
+  ExtractURL
+  GoBack
+ }",TRUE,Y
+W239T1,926,"ForEach v0 in GetArray(.inputs) do {
+  SendData //div[@class='searchBoxWrapper']/input[@class='searchLocationInput pac-target-input'] <v0>
+  Click //div[@class='searchButton']/button[@class='squareButton buttonLarge btnDoSearch']
+  While true do {
+  ForEach v1 in Descendants(, div[@class='locatorMainInfo'], 0) do {
+  ScrapeText <v1>//div[@class='storeMainAddress']
+  ScrapeText <v1>//div[@class='locatorAddressCityState']
+  ScrapeText <v1>//div[@class='locatorPhone']
+  }
+  if valid(//div[@class='pagingHolder']/button[@class='sprite-next-page-arrow ']) {
+  Click //div[@class='pagingHolder']/button[@class='sprite-next-page-arrow ']
+  }
+  }
+ 
+ }",TRUE,Y
+W240T1,109,"ForEach v0 in Descendants(, div[@class='anunt'], 0) do {
+  ScrapeText <v0>//strong
+  ScrapeText <v0>//div[@class='detaliu'][1]
+  ScrapeText <v0>//div[@class='suna_tel']
+ }
+ Click //body/section/div/div[1]/div[4]/table/tbody/tr/td[2]/ul/li[5]/span
+ ForEach v0 in Descendants(, div[@class='anunt'], 0) do {
+  ScrapeText <v0>//strong
+  ScrapeText <v0>//div[@class='detaliu'][1]
+  ScrapeText <v0>//div[@class='suna_tel']
+ }
+ Click //body/section/div/div[1]/div[4]/table/tbody/tr/td[2]/ul/li[7]/span
+ ForEach v0 in Descendants(, div[@class='anunt'], 0) do {
+  ScrapeText <v0>//strong
+  ScrapeText <v0>//div[@class='detaliu'][1]
+  ScrapeText <v0>//div[@class='suna_tel']
+ }
+ Click //body/section/div/div[1]/div[4]/table/tbody/tr/td[2]/ul/li[8]/span
+ While true do {
+  ForEach v0 in Descendants(, div[@class='anunt'], 0) do {
+  ScrapeText <v0>//strong
+  ScrapeText <v0>//div[@class='detaliu'][1]
+  ScrapeText <v0>//div[@class='suna_tel']
+  }
+  if valid(//ul[@class='pagination'][2]//span[9]) {
+  Click //ul[@class='pagination'][2]//span[9]
+  }
+ }",TRUE,Y
+W252T1,1000,"While true do {
+  ForEach v0 in Descendants(, h3[@class='result-heading'], 0) do {
+  ScrapeText <v0>/a[@class='result-title hdrlnk']
+  ScrapeLink <v0>/a[@class='result-title hdrlnk']
+  }
+  if valid(//span[@class='buttons'][2]/a[@class='button next']) {
+  Click //span[@class='buttons'][2]/a[@class='button next']
+  }
+ }",TRUE,Y
+W254T1,950,"ForEach v0 in GetArray(.addresses) do {
+  SendData //div[@class='adress-field']/input[@id='address-input-2'] <v0>
+  Click //div[@class='get-home-estimate']/button[@id='home-val-page-submit-2']
+  ScrapeText //div[@class='col-xs-6 col-sm-6 media-left']/span[@id='zestimate']
+ }",TRUE,Y
+W25T1,136,"While true do {
+  ForEach v0 in Descendants(, div[@class='title'], 0) do {
+  ScrapeText <v0>//a
+  ScrapeLink <v0>//a
+  }
+  if valid(//div[@class='alignleft']/a) {
+  Click //div[@class='alignleft']/a
+  }
+ }",TRUE,Y
+W262T1,16,"ForEach v0 in Descendants(, div[@class='flex flex-col w-full md:w-1/2 pl-8 text-gray-800'], 0) do {
+  ScrapeText <v0>/div[@class='flex flex-row items-start mt-1 md:mt-3']
+  ScrapeText <v0>/div[@class='hidden md:flex flex-row items-start mt-2']
+ }",TRUE,Y
+W265T1,1000,"While true do {
+  ForEach v0 in Descendants(, figure[@class='MosaicAsset-module__figure____SWrB'], 0) do {
+  Download <v0>/img[@class='MosaicAsset-module__thumb___YJI_C']
+  }
+  if valid(//section[@class='PaginationRow-module__container___XBmU4']/a[@class='PaginationRow-module__button___pgPXn PaginationRow-module__nextButton___3LGik']) {
+  Click //section[@class='PaginationRow-module__container___XBmU4']/a[@class='PaginationRow-module__button___pgPXn PaginationRow-module__nextButton___3LGik']
+  }
+ }",TRUE,Y
+W268T1,561,"While true do {
+  ForEach v0 in Descendants(, div[@class='info'], 0) do {
+  ScrapeText <v0>//span[1]
+  ScrapeText <v0>//span[@class='call-number']
+  }
+  if valid(//div[@class='pagination']//a[@class='next ajax-page']) {
+  Click //div[@class='pagination']//a[@class='next ajax-page']
+  }
+ }",TRUE,Y
+W276T1,312,"ForEach v0 in GetArray(.folio_numbers) do {
+  SendData //div[@id='basic']//input[@class='ui-autocomplete-input'][1] <v0>
+  Click //div[@id='basic']/button[@class='btn btn-primary']
+  Click //table[@id='table-basic-results']//td[@class='link force-one-line']
+  Download //div[@class='wrap'][4]//img
+  GoBack
+  GoBack
+ }",TRUE,Y
+W284T1,680,"While true do {
+  ForEach v0 in Descendants(, div[@class='info'], 0) do {
+  ScrapeText <v0>//a[@class='business-name']
+  ScrapeText <v0>//div[@class='phones phone primary']
+  }
+  if valid(//div[@class='pagination']//a[@class='next ajax-page']) {
+  Click //div[@class='pagination']//a[@class='next ajax-page']
+  }
+ }",TRUE,Y
+W285T1,547,"ForEach v0 in GetArray(.search_words) do {
+  SendData //div[@class='header__form']/input[@name='text'] <v0>
+  Click //div[@class='header__form']/button[@name='Search']
+  ScrapeText //div[@class='item-box__description'][1]//p[1]
+ }",TRUE,Y
+W287T1,641,"ForEach v0 in GetArray(.search_words) do {
+  SendData //div[@class='a4bIc']/input[@class='gLFyf gsfi'] <v0>
+  Click //div[@class='RNNXgb']/button[@class='Tg7LZd']
+  ScrapeLink //div[@class='yuRUbf'][1]/a
+ }",TRUE,Y
+W295T1,88,"While true do {
+  ForEach v0 in Children(//body/div[5]/div/div, article, 0) do {
+  ScrapeText <v0>/div[2]/div[2]/header/h2/a
+  ScrapeText <v0>/div[2]/div[1]/span[1]/a
+  ScrapeLink <v0>/div[2]/div[2]/header/h2/a
+  }
+  if valid(//a[@class='next page-numbers']/span[@aria-hidden='true']) {
+  Click //a[@class='next page-numbers']/span[@aria-hidden='true']
+  }
+ }",TRUE,Y
+W296T1,1000,"ForEach v0 in Descendants(//aside[@id='archives-2'], a, 0) do {
+  Click <v0>
+  While true do {
+  ForEach v0 in Descendants(, h2[@class='entry-title'], 0) do {
+  ScrapeText <v0>/a
+  }
+  if valid(//li[@class='previous']/a) {
+  Click //li[@class='previous']/a
+  }
+  }
+ 
+ }",TRUE,Y
+W33T1,973,"While true do {
+  ForEach v0 in Descendants(, div[@class='a-section sp_offerVertical p13n-asin sp_ltr_offer sp_attributes_offer'], 0) do {
+  ScrapeText <v0>//div[@class='sponsored-products-truncator-truncated']
+  ScrapeText <v0>//span[4]
+  ScrapeText <v0>/a[@class='a-link-normal']
+  }
+  if valid(//div[@class='a-carousel-col a-carousel-right'][3]/a[@class='a-button a-button-image a-carousel-button a-carousel-goto-nextpage']) {
+  Click //div[@class='a-carousel-col a-carousel-right'][3]/a[@class='a-button a-button-image a-carousel-button a-carousel-goto-nextpage']
+  }
+ }
+ 
+ Click //body/div[1]/div[2]/div[9]/div[11]/div/div/div[1]/div[2]/div/div/div[3]/a",TRUE,Y
+W38T1,13,"ForEach v0 in Descendants(//ul[@class='srp-results srp-list clearfix'], span[@class='s-item__price'], 0) do {
+  ScrapeText <v0>
+ }",TRUE,Y
+W3T1,84,"Click //body/div[4]/nav/a[3]
+ ForEach v0 in Descendants(, div[@class='lrgr'], 0) do {
+  Click <v0>/h2[@itemprop='name']
+  ExtractURL
+  ScrapeText //div[@class='col']/h1[@itemprop='name']
+  ScrapeText //p[@class='lead']//span[@itemprop='price']
+  GoBack
+ }",TRUE,Y
+W46T1,1000,"ForEach v0 in GetArray(.ids) do {
+  SendData //div[@id='searchControl']/input[@id='map_query'] <v0>
+  Click //div[@id='searchControl']/input[@id='search_submit']
+  ForEach v1 in Children(//tr[@class='odd'], td[@class=' '], 1) do {
+  ScrapeText <v1>
+  }
+ }",TRUE,Y
+W49T1,1000,"SendKeys //body/div[1]/div/div[1]/div/div/div[2]/div[2]/form/div/div/div/input coffee maker
+ Click //body/div[1]/div/div[1]/div/div/div[2]/div[2]/form/div/div/div/button
+ While true do {
+  ForEach v0 in Descendants(, a[@class='pcv3__info-content css-1qnnuob'], 0) do {
+  ScrapeText <v0>/div[@class='css-1f4mp12']
+  ScrapeText <v0>/div[@class='css-rhd610']
+  }
+  if valid(//div[@class='css-1q668u-unf-pagination-items']/button[@aria-label='Halaman berikutnya']) {
+  Click //div[@class='css-1q668u-unf-pagination-items']/button[@aria-label='Halaman berikutnya']
+  }
+ }",TRUE,Y
+W50T1,946,"ForEach v0 in GetArray(.nums) do {
+  SendData //div[@class='col-lg-10 d-flex align-items-center form-group']/input[@id='search-param'] <v0>
+  Click //div[@class='col-lg-2 form-group mb-0']/button[@id='search-bar']
+  ScrapeText //div[@class='row mb-1'][1]/div[@class='col-12 col-md-9 td-body']
+  ScrapeText //div[@class='row mb-1'][2]/div[@class='col-12 col-md-9 td-body']
+  ScrapeText //div[@class='row mb-1'][4]/div[@class='col-12 col-md-9 td-body']
+  GoBack
+ }",TRUE,Y
+W52T1,816,"ForEach v0 in GetArray(.parcelID) do {
+  Click //table[@id='radio1']//input[@id='radio1_1']
+  SendData //table[@id='Table5']//input[@name='txtParcelIDFull'] <v0>
+  Click //div[@id='data-container']//input[@name='btnSearch']
+  ScrapeText //table[@id='Table1']//span[@id='BasicInfo1_lblAddress']
+  ScrapeText //table[@id='Table1']//span[@id='BasicInfo1_lblOwner']
+  Click //div[@id='Header1_pnlTabs']/input[@name='Header1$lnkImage']
+  Download //p[@class='center']/img[@id='imgPicture']
+  GoBack
+  GoBack
+  GoBack
+ }",TRUE,Y
+W58T1,7,"ForEach v0 in Descendants(, div[@class='mediaSquare x-large'], 0) do {
+  ScrapeLink <v0>//img
+ }",TRUE,Y
+W69T1,992,"ForEach v0 in Descendants(, li[@class='clearfix job-bx wht-shd-bx'], 0) do {
+  ScrapeText <v0>//h2
+ }
+ ForEach v0 in Descendants(//div[@class='inside-rhs main-search-block'], em, 1) do {
+  Click <v0>
+  ForEach v0 in Descendants(//section[@class='ubility-lhs clearfix'], h2, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//div[@class='srp-pagination clearfix'], em, 2) do {
+  Click <v0>
+  ForEach v0 in Descendants(, header[@class='clearfix'], 0) do {
+  ScrapeText <v0>/h2
+  }
+ }",TRUE,Y
+W6T1,992,"While true do {
+  ForEach v0 in Descendants(, div[@class='a-section celwidget'], 0) do {
+  ScrapeText <v0>//span[@class='a-profile-name']
+  ScrapeText <v0>//a[@data-hook='review-title']
+  ScrapeText <v0>//span[@data-hook='review-body']
+  }
+  if valid(//ul[@class='a-pagination']/li[@class='a-last']) {
+  Click //ul[@class='a-pagination']/li[@class='a-last']
+  }
+ }",TRUE,Y
+W77T1,111,"ForEach v0 in Children(//body/div[1]/div[3]/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[3]/div/span/a
+ }
+ ForEach v0 in Children(//div[@class='pagelinks floatleft'], a[@class='navPages'], 0) do {
+  Click <v0>
+  ForEach v0 in Children(//body/div[1]/div[3]/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[3]/div/span/a
+  }
+ }",TRUE,Y
+W81T1,936,"ForEach v0 in GetArray(.ids) do {
+  SendData //form[@class='header__search-form']/input[@name='keyword'] <v0>
+  Click //form[@class='header__search-form']/a[@class='search_submit header__search-button form-submitter']
+  ForEach v1 in Descendants(, div[@class='price_block'], 0) do {
+  ScrapeText <v1>/div[@class='price']
+  }
+ }",TRUE,Y
+W87T1,413,"While true do {
+  ForEach v0 in Descendants(, article[@class='productListItem clearfix'], 0) do {
+  ScrapeLink <v0>/a[@class='productListItem__link ga-item']
+  ScrapeText <v0>//h1
+  ScrapeText <v0>//span[@class='addToBasket__unitPriceText'][2]
+  }
+  if valid(//li[@class='pagination__item pagination__item--next']/a[@title='Next']) {
+  Click //li[@class='pagination__item pagination__item--next']/a[@title='Next']
+  }
+ }",TRUE,Y
+W88T1,48,"ForEach v0 in Descendants(, h3[@class='style-scope ytd-grid-video-renderer'], 0) do {
+  ScrapeText <v0>/a[@id='video-title']
+ }",TRUE,Y
+W8T1,479,"SendKeys //body/div[1]/div[1]/header/div[1]/div[3]/div/form/div[1]/div/div/input iphone 4
+ Click //body/div[1]/div[1]/header/div[1]/div[3]/div/form/button
+ While true do {
+  ForEach v0 in Descendants(, div[@class='mp-Listing-group'], 0) do {
+  ScrapeText <v0>//h3[@class='mp-Listing-title']
+  ScrapeText <v0>//span[@class='mp-Listing-price mp-text-price-label']
+  }
+  if valid(//nav[@class='mp-PaginationControls-pagination']//span[@aria-hidden='true'][2]) {
+  Click //nav[@class='mp-PaginationControls-pagination']//span[@aria-hidden='true'][2]
+  }
+ }",TRUE,Y
+W99T1,168,"ForEach v0 in Descendants(//table[@class='notelinkstable'], a[@class='notelinks'], 0) do {
+  Click <v0>
+  ForEach v0 in Children(//body/form/table[4]/tbody/tr/td/table/tbody/tr[2]/td[2]/table[3]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]
+  ScrapeText <v0>/td[4]
+  }
+ }",TRUE,Y
+W9T1,89,"ForEach v0 in GetArray(.licenseIDs) do {
+  Click //form[@name='menu_line'][2]/a
+  SendData //form[@name='form1']//input[@title='Enter Licence Number'] <v0>
+  Click //form[@name='form1']//input[@name='Submit']
+  ScrapeText //div[@class='result']/div[@class='result-title']
+  ScrapeText //div[@class='result-details'][1]/p
+ }",TRUE,Y
+W111T2,125,"ForEach v0 in GetArray(.names) do {
+  SendData //div[@class='solo pa-3 d-flex'][1]/input[@id='search-name'] <v0>
+  Click //div[@class='col-2']/button[@aria-label='button to search']
+  ScrapeLink //div[@class='results-container']/a[@class='serp-card hide-scrollbar amp-event'][1]
+  GoBack
+ }",TRUE,N
+W146T2,602,"ForEach v0 in GetArray(.queries) do {
+  SendData //div[@class='d1dlne'][2]/input[@class='Ax4B8 ZAGvjd'] <v0>
+  Click //div[@class='mLoZRc']//div[@class='MkjOTb SAq8ff'][1]
+  ScrapeText //div[@class='kf1m0'][1]/div[@class='YMlKec fxKbKc']
+  GoBack
+ }",TRUE,N
+W149T2,9,"ForEach v0 in Children(//div[@class='_43bb2516'], div[@class='_1658a9d7 a74c4be5'], 0) do {
+  ScrapeText <v0>
+ }",TRUE,N
+W157T2,172,"ForEach v0 in GetArray(.inputs) do {
+  SendData //div[@class='input-field__wrapper'][2]/input[@class='input-field__input js_search-form-input'] <v0>
+  Click //div[@class='search-form__container'][2]/button[@class='btn btn--xl btn--red search-form__button js_search-form__button']
+  ScrapeText //table[@class='instrument-table js_tab-menu__tab-target js_instrument-table']//td[2]
+  ScrapeText //table[@class='instrument-table js_tab-menu__tab-target js_instrument-table']//td[8]
+  GoBack
+ }",TRUE,N
+W1T2,971,"SendKeys //body/div[1]/div/header/div[2]/div/div[1]/div[1]/div/form/input iphone 12
+ Click //body/div[1]/div/header/div[2]/div/div[1]/div[1]/button
+ While true do {
+  ForEach v0 in Descendants(, a[@data-sqe='link'], 0) do {
+  ScrapeLink <v0>//img[@class='_7DTxhh vc8g9F']
+  ScrapeText <v0>//div[@class='ie3A+n bM+7UW Cve6sh']
+  ScrapeLink <v0>
+  ScrapeText <v0>//div[@class='zGGwiV']
+  }
+  if valid(//div[@class='shopee-page-controller']/button[@class='shopee-icon-button shopee-icon-button--right ']) {
+  Click //div[@class='shopee-page-controller']/button[@class='shopee-icon-button shopee-icon-button--right ']
+  }
+ }",TRUE,N
+W214T1,10,"Click //body/div/div[2]/main/div/div[2]/div/div/div[2]/button[1]
+ While true do {
+  ScrapeText //body/div/div[2]/main/div/div[2]/div/div/div[1]
+  if valid(//div[@class='nw']/button[@class='md but text f24 egenbut'][1]) {
+  Click //div[@class='nw']/button[@class='md but text f24 egenbut'][1]
+  }
+ }",TRUE,N
+W228T4,401,"ForEach v0 in Descendants(, div[@class='accordion_selector'], 1) do {
+  Click <v0>
+  ScrapeText <v0>//h3[@class='fxg-title fxg-title--custom cc-aem-u-align--center@small cc-aem-u-align--center@x-small-only ']
+  ForEach v0 in Descendants(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }",TRUE,N
+W232T2,297,"While true do {
+  ForEach v0 in Descendants(, div[@class='thumbnail__right text-right'], 0) do {
+  ScrapeText <v0>/span[@class='ad__price']
+  }
+  if valid(//div[@class='btn-group btn-group-justified']/a[@class='btn btn-sm btn-default page-right btn-page-next']) {
+  Click //div[@class='btn-group btn-group-justified']/a[@class='btn btn-sm btn-default page-right btn-page-next']
+  }
+ }",TRUE,N
+W252T2,1000,"While true do {
+  ForEach v0 in Descendants(, div[@class='gallery-card'], 0) do {
+  ScrapeText <v0>/a[@class='titlestring']
+  ScrapeLink <v0>/a[@class='titlestring']
+  }
+  if valid(//div[@class='cl-search-paginator'][1]/button[@class='bd-button cl-next-page icon-only']) {
+  Click //div[@class='cl-search-paginator'][1]/button[@class='bd-button cl-next-page icon-only']
+  }
+ }",TRUE,N
+W259T1,1000,"ForEach v0 in Children(//select[@name='lfyear'], option, 1) do {
+  Click <v0>
+  ForEach v0 in Descendants(//table[@class='table-block lf_hist'], td[@class='ag'], 2) do {
+  ScrapeText <v0>
+  }
+ }",TRUE,N
+W261T2,174,"While true do {
+  ForEach v0 in Children(//body/section/div/div[3]/div[1]/table/tbody, tr, 1) do {
+  ScrapeText <v0>/td[1]/a
+  ScrapeText <v0>/td[2]
+  }
+  if valid(//div[@class='wp-pagenavi']/a[@class='nextpostslink']) {
+  Click //div[@class='wp-pagenavi']/a[@class='nextpostslink']
+  }
+ }",TRUE,N
+W265T2,980,"While true do {
+  ForEach v0 in Descendants(, figure[@class='fm5xLZr6E1NLQUhYh_xd'], 0) do {
+  Download <v0>//img[@class='BLA_wBUJrga_SkfJ8won']
+  }
+  if valid(//section[@class='UZ23mQXHPaMaCTdUWHTA']/button[@data-testid='pagination-button-next']) {
+  Click //section[@class='UZ23mQXHPaMaCTdUWHTA']/button[@data-testid='pagination-button-next']
+  }
+ }",TRUE,N
+W287T2,407,"ForEach v0 in GetArray(.search_words) do {
+  SendData //div[@class='a4bIc']/textarea[@class='gLFyf'] <v0>
+  Click //div[@class='RNNXgb']/button[@class='Tg7LZd']
+  ForEach v1 in Descendants(, div[@class='yuRUbf'], 0) do {
+  ScrapeLink <v1>/a
+  }
+ }",TRUE,N
+W304T1,1000,"ForEach v0 in Descendants(, h2[@class='h2_anime_title'], 0) do {
+  Click <v0>/a[@class='link-title']
+  ScrapeText //td[@class='va-t ar pl4 pr4'][1]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][2]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][3]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][4]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][5]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][6]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][7]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][8]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][9]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][10]/a
+  GoBack
+ }",TRUE,N
+W307T1,763,"While true do {
+  ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div, div, 0) do {
+  ScrapeText <v0>/div[3]/h3/a
+  ForEach v0 in Children(<v0>/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+  }
+  }
+  if valid(//div[@class='desc'][2]/a) {
+  Click //div[@class='desc'][2]/a
+  }
+ }",TRUE,N
+W34T2,985,"SendKeys //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[1]/div[1]/div/input[1] toner
+ Click //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[3]/input
+ While true do {
+  ForEach v0 in Descendants(, div[@class='s-item__title'], 0) do {
+  ScrapeText <v0>/span[@aria-level='3']
+  ScrapeLink <v0>/span[@aria-level='3']
+  }
+  if valid(//nav[@class='pagination']/a[@class='pagination__next icon-link']) {
+  Click //nav[@class='pagination']/a[@class='pagination__next icon-link']
+  }
+ }",TRUE,N
+W34T3,401,"SendKeys //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[1]/div[1]/div/input[1] toner
+ Click //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[3]/input
+ ForEach v0 in Descendants(, div[@class='s-item__title'], 1) do {
+  ScrapeText <v0>/span[@aria-level='3']
+  ScrapeLink <v0>/span[@aria-level='3']
+  Click <v0>/span[@aria-level='3']
+  ForEach v0 in Descendants(, div[@class='merch-item-card-container'], 0) do {
+  ScrapeText <v0>//h3
+  ScrapeText <v0>//div[@class='merch-price']
+  }
+ }",TRUE,N
+W49T2,988,"SendKeys //body/div[1]/div/div[1]/div/div/div[2]/div[2]/div[1]/div/div/div/input coffee maker
+ Click //body/div[1]/div/div[1]/div/div/div[2]/div[2]/div[3]/div/a[1]
+ While true do {
+  ForEach v0 in Descendants(, div[@class='css-5fmc3z'], 0) do {
+  ScrapeText <v0>//div[@class='prd_link-product-name css-3um8ox']
+  ScrapeText <v0>//div[@class='prd_link-product-price css-1ksb19c']
+  }
+  if valid(//ul[@class='css-1ni9y5x-unf-pagination-items']//button[@class='css-16uzo3v-unf-pagination-item'][2]) {
+  Click //ul[@class='css-1ni9y5x-unf-pagination-items']//button[@class='css-16uzo3v-unf-pagination-item'][2]
+  }
+ }",TRUE,N
+W51T1,270,"Click //body/div[5]/div/div[2]/div/section[1]/div[2]/div[2]/div[1]/div/div[1]/sb-comp/div/div/div[3]/div[5]
+ ForEach v0 in Children(//body/div[5]/div/div[2]/div/section[1]/div[2]/div[2]/div[1]/div/div[2]/sb-comp/div, div, 0) do {
+  ForEach v0 in Children(<v0>/sb-lazy-render, div, 0) do {
+  ScrapeText <v0>/div/div[2]/div[2]/button[1]/div/div[2]/span
+  }
+ }",TRUE,N
+W51T2,30,"ForEach v0 in Descendants(, div[@data-sortindex='1'], 0) do {
+  ScrapeText <v0>/div[@class='outcome-pricedecimal drawPriceDecimal']
+ }",TRUE,N
+W54T2,373,"ForEach v0 in Descendants(, div[@class='Pos(r) D(f)'], 0) do {
+  ScrapeText <v0>//h3[@data-test-locator='stream-item-title']
+  ScrapeLink <v0>//a[@data-wf-caas-prefetch='1']
+ }",TRUE,N
+W78T1,11,"ForEach v0 in Descendants(, div[@class='outage box box--border -unplanned'], 0) do {
+  ScrapeText <v0>/div[@class='outage__restoration']
+ }",TRUE,N
+W78T2,49,"ForEach v0 in Children(//body/div[1]/main/div/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div[1]/div[2], div, 0) do {
+  ScrapeText <v0>/div[1]
+  ScrapeText <v0>/div[2]/div
+  ScrapeText <v0>/div[3]/div
+  ScrapeText <v0>/div[4]
+  ScrapeText <v0>/div[5]
+ }",TRUE,N
+W87T2,1000,"While true do {
+  ForEach v0 in Descendants(, article[@class='clearfix'], 0) do {
+  ScrapeLink <v0>/a[@class='productListGridItem__link ga-item ga4-track-select_item']
+  ScrapeText <v0>//h1
+  ScrapeText <v0>//span[@class='addToBasket__unitPriceText'][2]
+  }
+  if valid(//li[@class='pagination__item pagination__item--next']/a[@title='Next']) {
+  Click //li[@class='pagination__item pagination__item--next']/a[@title='Next']
+  }
+ }",TRUE,N
+W1T1,954,"Click //body/div[2]/div/div/div[2]/div
+ SendKeys //body/div[1]/div/div[2]/div[1]/div[2]/div/div[1]/div[1]/div/form/input iphone 12
+ Click //body/div[1]/div/div[2]/div[1]/div[2]/div/div[1]/div[1]/button
+ ForEach v0 in Descendants(, div[@class='_10Wbs- _5SSWfi UjjMrh'], 0) do {
+  Click <v0>
+  ScrapeText //body/div[1]/div/div[2]/div[2]/div[2]/div[1]/div[3]/div/div[1]/span
+  ScrapeText //div[@class='_193wCc']//div[@class='Ybrg9j']
+  ExtractURL
+  GoBack
+ }
+ Click //body/div[1]/div/div[3]/div/div[2]/div[2]/div[3]/div/button[8]
+ ForEach v0 in Descendants(, div[@class='_1N6I4W'], 0) do {
+  Click <v0>/div[@class='_10Wbs- _5SSWfi UjjMrh']
+  ScrapeText //div[@class='attM6y']/span
+  ScrapeText //div[@class='flex items-center'][2]/div[@class='Ybrg9j']
+  ExtractURL
+  GoBack
+ }
+ Click //body/div[1]/div/div[3]/div/div[2]/div[2]/div[3]/div/button[8]
+ ForEach v0 in Descendants(, div[@class='_1N6I4W'], 0) do {
+  Click <v0>/div[@class='_10Wbs- _5SSWfi UjjMrh']
+  ScrapeText //div[@class='attM6y']/span
+  ScrapeText //div[@class='flex items-center'][2]/div[@class='Ybrg9j']
+  ExtractURL
+  GoBack
+ }",FALSE,Y
+W112T1,127,"ForEach v0 in Children(//body/div[1]/div/div/div/div[2]/div/div[3]/div/div[2]/div/div[2]/div/div/table/tbody, tr, 2) do {
+  ScrapeText <v0>/td[1]
+  ScrapeText <v0>/td[4]
+ }",FALSE,Y
+W133T1,1000,"ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[1]/article/div[2]/div[3]/h2
+ ForEach v0 in Children(//body/div[1]/main/section/div[1]/section[1]/section/ol, li, 1) do {
+  ScrapeText <v0>/article/div[2]/div[2]/h2
+ }
+ ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[12]/article/div[2]/div[3]/h2
+ ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[13]/article/div[2]/div[2]/h2
+ ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[14]/article/div[2]/div[3]/h2
+ ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[15]/article/div[2]/div[2]/h2
+ ScrapeText //body/div[1]/main/section/div[1]/section[1]/section/ol/li[16]/article/div[2]/div[2]/h2
+ ForEach v0 in Descendants(, article[@data-lv='PremiumPlus'], 0) do {
+  ScrapeText <v0>//h2
+ }
+ ForEach v0 in Descendants(, article[@class='level2 layout-row layout-wrap layout-gt-xs-nowrap adLevel2'], 0) do {
+  ScrapeText <v0>//h2[@class='flex-12 ellipses']
+ }
+ ForEach v0 in Descendants(, article[@data-lv='Premium'], 0) do {
+  ScrapeText <v0>//h2[@class='flex-12 ellipses']
+ }
+ Click //body/div[1]/main/section/div[1]/section[1]/section/nav/ol/li[6]/a
+ ForEach v0 in Descendants(, div[@class='copyContainer flex-12 layout-row layout-wrap layout-align-center-center'], 0) do {
+  ScrapeText <v0>/h2[@class='flex-12 ellipses']
+ }",FALSE,Y
+W134T1,1000,"ForEach v0 in Descendants(, strong[@class='product name product-item-name'], 0) do {
+  Click <v0>/a[@class='product-item-link ng-binding']
+  ScrapeText //div[@class='page-title-wrapper product']/h1[@class='page-title']
+  ScrapeText //div[@class='product attribute sku']/div[@class='value']
+  ScrapeText //div[@class='product attribute overview']/div[@class='value']
+  Download //div[@class='fotorama__stage__frame fotorama__active fotorama_vertical_ratio fotorama__loaded fotorama__loaded--img']/img[@class='fotorama__img magnify-opaque']
+  GoBack
+ }",FALSE,Y
+W156T1,1000,"Click //body/div[12]/span[2]
+ Click //body/div[12]/div/span[1]
+ Click //body/div[13]/span[2]
+ Click //body/div[13]/div/span[17]
+ Click //body/div[15]/span[2]
+ Click //body/div[15]/div/span[1]
+ Click //body/div[21]/span[2]
+ Click //body/div[21]/div/span[7]
+ Click //body/div[22]/span[2]
+ Click //body/div[22]/div/span[1]
+ Click //body/div[23]/span[4]
+ Click //body/div[23]/div/span[1]
+ While true do {
+  Click //body/div[24]/span[2]
+  Click //body/div[24]/div/span[1]
+  ScrapeText //body/div[12]/span[2]
+  ScrapeText //body/div[13]/span[2]
+  ScrapeText //body/div[15]/span[2]
+  ScrapeText //body/div[21]/span[2]
+  ScrapeText //body/div[22]/span[2]
+  ScrapeText //body/div[23]/span[2]
+  ScrapeText //body/div[24]/span[2]
+  if valid(//tr[@id='priceLine1']//a[@id='notInStockHighPrice']) {
+  Click //tr[@id='priceLine1']//a[@id='notInStockHighPrice']
+  }
+ }",FALSE,Y
+W164T1,1000,"ForEach v0 in Descendants(//div[@aria-hidden='false'], div[@class='dropdown-item'], 0) do {
+  Click //div[@class='universal-dropdown dropdown']/button[@aria-haspopup='true']
+  Click <v0>
+  ForEach v0 in Children(//body/main/div/div[3]/div[2]/div/div/div/div/div/div/div[7]/div/div/div/div/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[1]
+  ScrapeText <v0>/td[9]
+  }
+ }
+ ForEach v0 in Descendants(//div[@aria-hidden='false'], div[@class='dropdown-item'], 2) do {
+  Click //div[@class='universal-dropdown dropdown']/button[@aria-haspopup='true']
+  Click <v0>
+  ForEach v0 in Children(//body/main/div/div[3]/div[2]/div/div/div/div/div/div/div[7]/div/div/div/div/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[1]
+  ScrapeText <v0>/td[9]
+  }
+ }",FALSE,Y
+W213T1,1000,"ForEach v0 in GetArray(.inputs) do {
+  SendData //div[@class='medium-5 columns end form-block'][2]/input[@name='p$lt$ctl01$pageplaceholder$p$lt$ctl02$CPSO_AllDoctorsSearch$txtCPSONumber'] <v0>
+  Click //div[@class='search-panel--actions'][1]/input[@name='p$lt$ctl01$pageplaceholder$p$lt$ctl02$CPSO_AllDoctorsSearch$btnSubmit']
+  ScrapeText //div[@class='name_cpso_num']/h1[@id='docTitle']
+  ScrapeText //div[@class='practice-location']/div[@class='location_details']
+  ScrapeText //section[@id='specialties']//td[1]
+  ScrapeText //section[@id='specialties']//td[2]
+  ScrapeText //section[@id='specialties']//td[3]
+  ScrapeText //section[@id='specialties']//td[4]
+  ScrapeText //section[@id='specialties']//td[5]
+  ScrapeText //section[@id='specialties']//td[6]
+  GoBack
+ }",FALSE,Y
+W253T1,1000,"SendData //body/form/div[6]/div/div[4]/div/div/div[1]/div[3]/div/input search_item[0].from_date
+ SendData //body/form/div[6]/div/div[4]/div/div/div[1]/div[4]/div/input search_item[0].to_date
+ SendData //body/form/div[6]/div/div[4]/div/div/div[1]/div[5]/div/input search_item[0].grantor
+ Click //body/form/div[6]/div/div[4]/div/div/div[2]/div/input[1]
+ ForEach v0 in Descendants(, tr[@class='odd'], 0) do {
+  ScrapeText <v0>/td[2]
+  ScrapeText <v0>/td[3]
+ }
+ Click //body/form/div[6]/div/div[5]/div/div[2]/div/div/div/div[1]/input[2]
+ ForEach v0 in Descendants(, tr[@class='odd'], 0) do {
+  ScrapeText <v0>/td[2]
+  ScrapeText <v0>/td[3]
+ }",FALSE,Y
+W274T1,1000,"While true do {
+  Click //body/div[2]/table/tbody/tr/td[1]/a
+  if valid(//table[@class='schoolDataset']//a[1]) {
+  Click //table[@class='schoolDataset']//a[1]
+  }
+ }
+ 
+ ScrapeText //body/div[3]/table/tbody/tr/td[2]/div/div/h3
+ ScrapeText //body/div[3]/table/tbody/tr/td[2]/div/div/table/tbody/tr[1]/td[1]/strong
+ ForEach v0 in Descendants(//table[@class='schoolDataset'], a, 1) do {
+  GoBack
+  Click <v0>
+  ScrapeText //body/div[3]/table/tbody/tr/td[2]/div/div/h3
+  ScrapeText //table[@class='contentTable']//strong[6]
+ }
+ GoBack
+ ForEach v0 in Descendants(//table[@class='schoolDataset'], a, 1) do {
+  GoBack
+  Click <v0>
+  ForEach v0 in Descendants(//table[@class='schoolDataset'], a, 0) do {
+  Click <v0>
+  ScrapeText //div[@class='breadcrumb']/h3
+  ScrapeText //div[@class='breadcrumb']//strong[1]
+  GoBack
+  }
+ }",FALSE,Y
+W34T1,1000,"SendKeys //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[1]/div/div/input[1] toner
+ Click //body/header/table/tbody/tr/td[5]/form/table/tbody/tr/td[3]/input
+ ForEach v0 in Descendants(//ul[@class='srp-results srp-list clearfix'], h3[@class='s-item__title'], 0) do {
+  ScrapeText <v0>
+  ScrapeLink <v0>
+ }
+ ScrapeText //body/div[5]/div[4]/div[2]/div[1]/div[2]/ul/li[7]/div/div[2]/a/h3",FALSE,Y
+W40T1,1000,"ForEach v0 in Descendants(, li[@class='wall'], 0) do {
+  Download <v0>//img[@class='thumb_img']
+ }
+ Click //body/div[3]/div/div[2]/div/div/div[1]/section/div[3]/div[1]/div[4]/a[2]
+ ForEach v0 in Descendants(, img, 2) do {
+  Download <v0>
+ }
+ Click //body/div[3]/div/div[2]/div/div/div[1]/section/div[3]/div[4]/a[5]
+ While true do {
+  ForEach v0 in Descendants(, div[@class='thumb'], 0) do {
+  Download <v0>//img[@class='thumb_img']
+  }
+  if valid(//div[@class='pagination']/a[6]) {
+  Click //div[@class='pagination']/a[6]
+  }
+ }",FALSE,Y
+W48T1,1000,"ForEach v0 in Descendants(, tr[@class='match '], 0) do {
+  ScrapeText <v0>//a[1]
+  ScrapeText <v0>//a[2]
+  ScrapeText <v0>//a[3]
+ }
+ ForEach v0 in Descendants(, tr[@class='match highlight'], 0) do {
+  ForEach v0 in Descendants(<v0>, a, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Descendants(, tr[@data-gender='m'], 0) do {
+  ScrapeText <v0>//a[1]
+  ScrapeText <v0>//a[2]
+  ScrapeText <v0>//a[3]
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][5], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][6], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][7], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][5], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][6], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][8], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][9], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][7], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][8], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][10], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][11], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][9], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][10], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][12], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][13], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][11], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][12], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][14], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][15], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][13], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match highlight'][14], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//tr[@class='match '][16], a, 0) do {
+  ScrapeText <v0>
+ }",FALSE,Y
+W53T1,123,,FALSE,Y
+W56T1,1000,"ForEach v0 in Descendants(, td[@class='titleColumn'], 0) do {
+  Click <v0>/a
+  ScrapeText //div[@class='ipc-overflowText ipc-overflowText--pageSection ipc-overflowText--height-short ipc-overflowText--short ipc-overflowText--base']//span[@class='ipc-metadata-list-item__list-content-item']
+  GoBack
+ }",FALSE,Y
+W80T1,1000,"ForEach v0 in Descendants(, div[@class='d-flex h-100 flex-column justify-content-between'], 0) do {
+  ScrapeText <v0>//div[@class='product-name font-weight-bold']
+ }",FALSE,Y
+W100T1,1000,"Click //body/aside/div/main/section/div[2]/section/button[2]
+ ForEach v0 in Descendants(, h2[@class='TextSubHeading__TextSubHeadingWrapper-sc-1c6hp2-0 jyVhaG styled__StyledTitle-sc-1kpvi4z-8 eFoqBy'], 0) do {
+  Click <v0>/a[@class='Link-sc-6wulv7-0 styled__StyledTitleLink-sc-1kpvi4z-10 kWpDHB ilOvgj']
+  ScrapeText //body/div[1]/div[1]/div[2]/div[2]/div[1]/div/article/div[1]/div[2]/h1
+  ScrapeText //div[@class='BodyCard__StyledCard-sc-15r463q-0 egrzaP']//div[@class='TextBody__TextBodyWrapper-cuv1ht-0 dZxnxn BodyCard__DescriptionPart-sc-15r463q-2 kTIjsw']
+  GoBack
+ }
+ ScrapeText //body/div[1]/div[1]/div[2]/div[2]/div[1]/div/article/div[2]/div[2]/div[3]/div[2]/div",FALSE,N
+W10T1,1000,"SendData //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[2]/td[3]/input name[0]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[5]/td[5]/input[1]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[4]/div[2]/div/table/tbody/tr/td[1]/a
+ ForEach v0 in Children(//div[@class='content'], div[@class='Panel'], 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[2]/span
+ GoBack
+ SendData //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[2]/td[3]/input name[1]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[5]/td[5]/input[1]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[4]/div[2]/div/table/tbody/tr/td[1]/a
+ ForEach v0 in Children(//div[@class='content'], div[@class='Panel'], 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[2]/span
+ GoBack
+ SendData //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[2]/td[3]/input name[2]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[5]/td[5]/input[1]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[4]/div[2]/div/table/tbody/tr/td[1]/a
+ ForEach v0 in Descendants(//div[@class='groupedContent'], div[@class='Panel'], 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[1]/td[2]/span
+ GoBack
+ SendData //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[2]/td[3]/input name[3]
+ Click //body/form/div[3]/div/div/div[3]/div/div/div/div[2]/table/tbody/tr[5]/td[5]/input[1]
+ ForEach v0 in Descendants(//table[@id='gvSearchResults'], a, 0) do {
+  Click <v0>
+  ScrapeText //div[@class='content']/div[@id='ctl00_MainContent_pnlAliases']
+  ScrapeText //div[@class='content']/div[@id='ctl00_MainContent_pnlAddress']
+  ScrapeText //table[@class='MainTable']//span[@id='ctl00_MainContent_lblType']
+  GoBack
+ }",FALSE,N
+W110T2,1000,"Click //body/div[1]/div/div/main/div/div[3]/div/div[2]/div[2]/div[2]/div/div[1]/div/a
+ ScrapeText //body/div[1]/div/div/main/div/section/div[2]/div/div[2]/div[1]/h1
+ While true do {
+  Click //body/div[1]/div/div/main/div/section/div[2]/div/div[3]/div[2]/div[3]/div/div[2]/div/div/ul/li[1]
+  ForEach v0 in Descendants(, td[@class='css-1po606w'], 0) do {
+  ScrapeText <v0>/p[@class='chakra-text css-4g4f6p']
+  }
+  if valid(//div[@aria-modal='true']/button[@aria-label='Close']) {
+  Click //div[@aria-modal='true']/button[@aria-label='Close']
+  }
+ }",FALSE,N
+W110T3,1000,"Click //body/div/div/main/div[1]/div[2]/div/div[1]/div[1]
+ ScrapeText //body/div[1]/div/main/div/div[2]/footer/div[1]/div[1]
+ ScrapeText //body/div[1]/div/main/div/div[2]/footer/div[1]/div[1]/div/div/h1
+ ForEach v0 in Descendants(, li[@class='ProductBreadcrumbs__ListItem-sc-1xjrw34-0 hXYhzN'], 0) do {
+  ScrapeText <v0>/a[@data-qa='product_breadcrumb']
+  ScrapeLink <v0>/a[@data-qa='product_breadcrumb']
+ }
+ Click //body/div[1]/div/main/div/div[2]/footer/div[1]/div[3]/li[3]/div/button
+ ForEach v0 in Children(//div[@class='GridTable__Table-sc-594s5n-0 gyCwQI PricingActivityWindowList__Table-sc-cyizog-4 iKufat'], div[@class='GridTable__Data-sc-594s5n-2 ioyMLj'], 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W117T1,1000,"ForEach v0 in Children(//div[@class='Calendar--gridWrapper--1oa1f'], button[@data-testid='ctaButton'], 0) do {
+  Click <v0>
+  ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//div[@class='Calendar--gridWrapper--1oa1f'], button[@class='CalendarDateCell--dayCell--2s4Tp Button--default--3zkvy'], 2) do {
+  Click <v0>
+  ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+  }
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[15]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[16]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[17]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[18]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[19]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[20]
+ ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[1]/main/div[2]/main/div[1]/section/div[3]/button[21]
+ While true do {
+  ForEach v0 in Descendants(//div[@class='DaypartDetails--Content--hJ52O DaypartDetails--contentGrid--1SWty'], span[@data-testid='TemperatureValue'], 0) do {
+  ScrapeText <v0>
+  }
+  if valid(//section[@class='card Card--card--HiWPW Calendar--Card--1ABHH']//button[26]) {
+  Click //section[@class='card Card--card--HiWPW Calendar--Card--1ABHH']//button[26]
+  }
+ }",FALSE,N
+W120T1,141,,FALSE,N
+W124T1,1000,"SendData //body/div/div/div/div/div/div/div[2]/div[3]/div[1]/form/div/div/fieldset[1]/div[1]/div/input[1] from_to_pair[0].from
+ SendData //body/div/div/div/div/div/div/div[2]/div[3]/div[1]/form/div/div/fieldset[1]/div[2]/div/input[1] from_to_pair[0].to
+ Click //body/div/div/div/div/div/div/div[2]/div[3]/div[1]/form/div/div/fieldset[6]/input
+ ForEach v0 in Descendants(, div[@class='inputRow'], 0) do {
+  ScrapeText <v0>/strong
+ }
+ ScrapeText //body/div/div/div/div/div/div/div[2]/div[3]/div/form/div/div[2]/div[1]/div[2]/ul/li/input
+ ForEach v0 in Children(//body/div/div/div/div/div/div/div[2]/div[3]/div/form/div/div[2]/div[1]/div[4]/div/div/div/div/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[1]
+  ScrapeText <v0>/td[3]
+ }",FALSE,N
+W12T1,1000,"ForEach v0 in Descendants(, div[@class='lister__item__image productView'], 0) do {
+  Click <v0>/a
+  Click //div[@class='chakra-form-control css-1kxonj9']/div
+  ScrapeText //p[@class='chakra-text css-0'][1]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][2]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][3]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][4]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][5]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][6]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][7]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][8]/span[@class='chakra-text css-1vg6q84']
+  ScrapeText //p[@class='chakra-text css-0'][9]/span[@class='chakra-text css-1vg6q84']
+  GoBack
+ }
+ Click //body/div[4]/div[4]/div[1]/div[3]/div[6]/ul/li[4]/div/div/a
+ Click //body/div[1]/div/div[8]/div[3]/div/div[1]/div/div/div
+ ForEach v0 in Descendants(, p[@class='chakra-text css-0'], 0) do {
+  ScrapeText <v0>/span[1]
+ }
+ GoBack
+ Click //body/div[4]/div[4]/div[1]/div[3]/div[6]/ul/li[5]/div/div/a
+ GoBack
+ Click //body/div[4]/div[4]/div[1]/div[3]/div[6]/ul/li[6]/div/div/a
+ Click //body/div[1]/div/div[8]/div[3]/div/div[1]/div/div/div
+ While true do {
+  ForEach v0 in Descendants(//div[@class='css-1awowa0'][2], span[@class='chakra-text css-1vg6q84'], 0) do {
+  ScrapeText <v0>
+  }
+  GoBack
+  Click //body/div[4]/div[4]/div[1]/div[3]/div[6]/ul/li[7]/div/div/a
+  if valid(//div[@class='chakra-form-control css-1kxonj9']/div[@class='css-79elbk']) {
+  Click //div[@class='chakra-form-control css-1kxonj9']/div[@class='css-79elbk']
+  }
+ }",FALSE,N
+W131T1,1000,"Click //body/div[3]/div/div[1]/div[1]/div/ul/li
+ Click //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div/div/div/div[3]/div/div/table/tbody/tr[2]/td[3]
+ Click //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/h3/a
+ ForEach v0 in Descendants(//div[@data-starting='default'], td[@class='bg-grey-light'], 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[2]/td[1]
+ ScrapeText //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[11]/td[3]
+ ScrapeText //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[11]/td[5]
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[12], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[13], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[14], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[15], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[16], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[17], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[18], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[19], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[20], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[21], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div[1]/div/div/div[5]/div[2]/div/div/div[3]/div[2]/div[1]/div/div/div/div/div/table/tbody/tr[22], td, 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div/div[3]/div[1]/div[1]/div/div/div[2]/div/div/div/div[4]/div/div/table/tbody/tr[2]/td[3]
+ ForEach v0 in Descendants(//div[@class='container-wrap'], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@data-column-margin='default'][5], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(, table[@class='tabelle'], 2) do {
+  GoBack
+  Click <v0>//td[@class='bg-grey-light'][4]
+  ForEach v0 in Descendants(//table[@class='tabelle'], td, 0) do {
+  ScrapeText <v0>
+  }
+ }",FALSE,N
+W139T1,1000,"Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/input
+ Click //body/div[5]/ul/li[1]
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/a[1]
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/div/input
+ While true do {
+  Click //body/div[5]/ul/li[1]
+  GoBack
+  Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/div/input
+  Click //body/div[5]/ul/li[2]
+  GoBack
+  if valid(//div[@class='mdl-cell mdl-cell--12-col']//input[@id='textfield-Selectaline']) {
+  Click //div[@class='mdl-cell mdl-cell--12-col']//input[@id='textfield-Selectaline']
+  }
+ }
+ 
+ Click //body/div[5]/ul/li[7]
+ GoBack
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/div/input
+ Click //body/div[5]/ul/li[8]
+ GoBack
+ GoBack
+ GoBack
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/input
+ Click //body/div[5]/ul/li[2]
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/a[1]
+ ForEach v0 in Children(//body/div[5]/ul, li, 0) do {
+  Click //div[@class='mdl-textfield mdl-js-textfield is-upgraded']/input
+  Click <v0>
+  GoBack
+ }
+ GoBack
+ GoBack
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/input
+ Click //body/div[5]/ul/li[3]
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/a[1]
+ ForEach v0 in Children(//ul[@class='mdl-option__list'], li[@class='mdl-option'], 0) do {
+  Click //div[@data-upgraded=',MaterialLayout']//input[@class='mdl-textfield__input']
+  Click <v0>
+  GoBack
+ }
+ GoBack
+ GoBack
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/div[2]/div/input
+ Click //body/div[5]/ul/li[4]
+ Click //body/div[3]/div/div[2]/div/div[3]/div[5]/div/a[1]
+ ForEach v0 in Children(//ul[@class='mdl-option__list'], li[@class='mdl-option'], 0) do {
+  Click //div[@class='mdl-textfield mdl-js-textfield is-upgraded']/input[@class='mdl-textfield__input']
+  Click <v0>
+  GoBack
+ }",FALSE,N
+W144T2,1000,"SendKeys //body/main/div/div[3]/div[2]/div[2]/form/div[1]/input Jalisco
+ Click //body/main/div/div[3]/div[2]/div[2]/form/div[1]/button
+ ForEach v0 in Descendants(, article[@class='Teaser Teaser--dill'], 0) do {
+  ScrapeText <v0>//span[@class='Teaser-pagesName'][1]
+  ScrapeText <v0>//address[@class='c-address']
+ }
+ Click //body/main/div/div[3]/div[3]/div[3]/div/div[2]/div/div[2]/button[7]
+ ForEach v0 in Descendants(, li[@class='ResultList-item ResultList-item--ordered js-location-result'], 0) do {
+  ScrapeText <v0>//span[@class='Teaser-pagesName'][1]
+  ScrapeText //li[@class='ResultList-item ResultList-item--ordered js-location-result is-hovered']//address[@class='c-address']
+ }
+ Click //body/main/div/div[3]/div[3]/div[3]/div/div[2]/div/div[2]/button[7]
+ ScrapeText //body/main/div/div[3]/div[3]/div[3]/div/div[1]/div[2]/ol/li[21]/article/div[1]/h3/span
+ ScrapeText //body/main/div/div[3]/div[3]/div[3]/div/div[1]/div[2]/ol/li[21]/article/div[2]/div[1]/div[1]/address
+ ScrapeText //body/main/div/div[3]/div[3]/div[3]/div/div[1]/div[2]/ol/li[22]/article/div[1]/h3/span
+ ForEach v0 in Descendants(, li[@class='ResultList-item ResultList-item--ordered js-location-result'], 2) do {
+  ScrapeText //li[@class='ResultList-item ResultList-item--ordered js-location-result is-hovered']//address[@class='c-address']
+  ScrapeText <v0>//span[@class='Teaser-pagesName'][1]
+ }",FALSE,N
+W154T1,1000,"ForEach v0 in Descendants(, tr[@class=' '], 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//tr[@data-reactid='.s6g2tjjq0m.1.0.0.1.$0.1.$competition-table-0.1.$row-3'], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][4], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(, tr[@class='gs-o-table__row--break '], 1) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//tr[@class=' '][5], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][6], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][7], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][8], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][9], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][10], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][11], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][12], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][13], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class='gs-o-table__row--break '][4], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][14], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][15], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//tr[@class=' '][16], td, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W158T1,127,,FALSE,N
+W158T2,1000,"ForEach v0 in Children(//body/main/div/div[1]/div[2]/div[1]/div[6]/div[2]/div[3]/div/div/div[1]/div/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[3]/span[1]
+  ScrapeText <v0>/td[2]/div/a
+  ScrapeLink <v0>/td[2]/div/a
+  ScrapeText <v0>/td[3]/button
+ }
+ ScrapeText //body/main/div/div[1]/div[2]/div[1]/div[6]/div[2]/div[3]/div/div/div[1]/div/table/tbody/tr[10]/td[3]/button",FALSE,N
+W169T1,1000,"Click //body/div[2]/div[1]/div/div[2]/div[2]/div/form/div[4]/input
+ While true do {
+  ForEach v0 in Children(//div[@class='col-sm-12 col-md-12 col-lg-12'], div, 1) do {
+  ScrapeText <v0>
+  }
+  if valid(//div[@class='form-group form-group-tweak'][2]/input[@name='subGenerate']) {
+  Click //div[@class='form-group form-group-tweak'][2]/input[@name='subGenerate']
+  }
+ }
+ 
+ Click //body/div[2]/div[1]/div/div[2]/div[2]/div/form/div[4]/input",FALSE,N
+W173T1,521,"Click //body/div/div[2]/div/div/p/label/select
+ Click //body/div/div[2]/div/div/p/label/select/option[3]
+ ForEach v0 in GetArray(.case_numbers) do {
+  SendData //label[@class='text field'][3]/input[@name='s_CaseNumber'] <v0>
+  Click //form[@id='CaseNumberSuffix']//input[@value='Submit']
+  Click //a[@class='white'][1]
+  Click //div[@id='content']//a[@class='white'][1]
+  ForEach v1 in Children(//body/div[2]/div/table[3]/tbody/tr/td/center/table/tbody, tr, 1) do {
+  ScrapeText <v1>/td[1]
+  ScrapeText <v1>/td[3]
+  }
+  GoBack
+  GoBack
+  GoBack
+ }",FALSE,N
+W181T1,1000,"ForEach v0 in GetArray(.parcelid) do {
+  SendData //table[@class='BannerSubTabs'][1]//input[@class='FormText'][1] <v0>
+  Click //td[@class='IndexLink'][4]/button[@id='btSearch']
+  Click //li[@class='unsel'][11]/a
+  ForEach v1 in Children(//body/div/div[3]/section/div/form/div[3]/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/div/div[1]/table[2]/tbody, tr, 1) do {
+  ScrapeText <v1>/td[1]
+  ScrapeText <v1>/td[5]
+  }
+  GoBack
+  GoBack
+ }
+ GoBack",FALSE,N
+W195T1,1000,"Click //body/section/div/main/article/div[2]/ol/ep-offer-resume[1]/div/div/div/h2
+ ScrapeText //body/section/div/main/article/div/header/div/h1
+ ScrapeText //body/section/div/main/article/div/footer/address/p[7]/a
+ GoBack
+ Click //body/section/div/main/article/div[2]/ol/ep-offer-resume[2]/div/div/div/h2
+ ScrapeText //body/section/div/main/article/div/header/div/h1
+ ScrapeText //body/section/div/main/article/div/footer/address/p[3]/a
+ ForEach v0 in Descendants(, div[@class='resume-offre'], 2) do {
+  GoBack
+  Click <v0>//h2
+  ScrapeText //header[@class='resume-offre logo']//h1
+  ScrapeText //article[@id='detail-offre']//a[3]
+ }",FALSE,N
+W1T3,1000,"SendKeys //body/div[1]/div/header/div[2]/div/div[1]/div[1]/div/form/input iphone 12
+ Click //body/div[1]/div/header/div[2]/div/div[1]/div[1]/button
+ ForEach v0 in Descendants(, a[@data-sqe='link'], 0) do {
+  ScrapeLink <v0>//img[@class='_7DTxhh vc8g9F']
+  ScrapeText <v0>//div[@class='ie3A+n bM+7UW Cve6sh']
+  ScrapeLink <v0>
+  Click <v0>
+  ScrapeText //div[@class='MCCLkq'][1]/div[@class='dR8kXc'][1]
+  ScrapeText //div[@class='MCCLkq'][1]/div[@class='dR8kXc'][2]
+  ScrapeText //div[@class='MCCLkq'][1]/div[@class='dR8kXc'][3]
+  ScrapeText //div[@class='MCCLkq'][1]/div[@class='dR8kXc'][4]
+  ScrapeText //div[@class='MCCLkq'][1]/div[@class='dR8kXc'][5]
+  GoBack
+ }",FALSE,N
+W204T2,1000,"Click //body/form/div[2]/div[4]/div/div[2]/div/div/div/div/div[3]/div[2]/div[1]/div[1]/div[2]/h4/a
+ ForEach v0 in Children(//div[@class='productSpecs Float33 Float firstItemInRow'], span, 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/form/div[2]/div[4]/div/div[2]/div/div/div/div/div[3]/div[2]/div[1]/div[2]/div[2]/h4/a
+ ForEach v0 in Children(//div[@class='productSpecs Float33 Float firstItemInRow'], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(, div[@class='otherStuff'], 2) do {
+  GoBack
+  Click <v0>//a[2]
+  ScrapeText //div[@class='productSpecs Float33 Float firstItemInRow']/span[1]
+  ScrapeText //div[@class='productSpecs Float33 Float firstItemInRow']/span[2]
+  ScrapeText //div[@class='productSpecs Float33 Float firstItemInRow']/span[3]
+  ScrapeText //div[@class='productSpecs Float33 Float firstItemInRow']/span[4]
+  ScrapeText //div[@class='productSpecs Float33 Float firstItemInRow']/span[5]
+ }",FALSE,N
+W218T2,1000,"ForEach v0 in Descendants(, div[@class='rs-result styles__resultContainer--a591872f'], 0) do {
+  Click <v0>//a[2]
+  ScrapeText //body/div[2]/div[1]/main/div[2]/div/div[2]/div[2]/div[1]/span
+  ScrapeText //body/div[2]/div[1]/main/div[2]/div/div[2]/div[2]/div[4]/div/div/div/div/a
+  ScrapeText //a[49]
+  ScrapeLink //div[@class='styles__attorneyInfo--_f0738f3 ms-5']//a[@class='type__button u-standard-hover u-hide-in-print']
+  GoBack
+ }
+ Click //body/div[2]/div[1]/main/div[3]/div/div/div/div[2]/div/ul/li[13]/a
+ ForEach v0 in Descendants(, p[@class='type__body fw-semibold u-standard-hover'], 0) do {
+  Click <v0>/a
+  ScrapeText //div[@class='pt-3 ms-4']/span[@class='styles__attorneyName--d74d526a']
+  ScrapeText //div[@class='styles__contactInfo--e65b5df4 type__button'][1]/a[@class='d-block u-standard-hover']
+  ScrapeText //div[@class='styles__contactInfo--e65b5df4 type__button'][1]//a[@class='type__button u-standard-hover']
+  ScrapeLink //div[@class='styles__attorneyInfo--_f0738f3 ms-5']//a[@class='type__button u-standard-hover u-hide-in-print']
+  GoBack
+ }",FALSE,N
+W228T2,1000,"ForEach v0 in Descendants(//div[@class='ups-container'][3], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='container-fluid iw_section'][3], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[3]/div/div/div/div[3]/div/div/div[3]/section[2]/div[2]/div[2]/table/thead/tr, th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='block-description'][2], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@aria-describedby='table-caption_3'], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//section[@class='content-blocks'][3], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[3]/div/div/div/div[3]/div/div/div[3]/section[4]/div[2]/div[2]/table/thead/tr, th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='block-description'][4], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@aria-describedby='table-caption_5'], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@aria-describedby='table-caption_5'], td, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W228T3,503,"Click //body/div[1]/div[3]/div/div/div/div[3]/div/div[2]
+ ForEach v0 in Children(//body/div[1]/div[3]/div/div/div/div[3]/div/div[2]/div/div/div/div[2]/div/table/tbody, tr, 1) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ Click //body/div[1]/div[3]/div/div/div/div[3]/div/div[3]
+ ForEach v0 in Children(//body/div[1]/div[3]/div/div/div/div[3]/div/div[3]/div/div/div/div[2]/div/table/tbody, tr, 1) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[3]/div/div/div/div[3]/div/div[3]/div/div/div/div[2]/div/table/tbody/tr[5], td, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W239T2,1000,"SendData //body/main/div[4]/section/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div[1]/input inputs[0]
+ Click //body/div[13]/div/div[1]
+ While true do {
+  ForEach v0 in Descendants(, div[@class='locatorMainInfo'], 0) do {
+  ScrapeText <v0>//div[@class='streetAddress']
+  ScrapeText <v0>//div[3]
+  ScrapeText <v0>/div[3]
+  }
+  if valid(//div[@class='FWHLocatorList resultsHolder']//button[@class='sprite-next-page-arrow pagingButton ']) {
+  Click //div[@class='FWHLocatorList resultsHolder']//button[@class='sprite-next-page-arrow pagingButton ']
+  }
+ }
+ 
+ SendData //body/main/div[4]/section/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div[1]/input inputs[1]
+ Click //body/div[13]/div/div[1]
+ ForEach v0 in Children(//div[@class='storeAddress'][1], div, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Children(//body/main/div[4]/section/div/div/div/div[5]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1], div, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[2]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='locatorMainInfo'][3], div, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[3]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='locatorMainInfo'][4], div, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[4]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='mainInfoContainer'][5], div, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[5]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='mainInfoContainer'][6], div, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[6]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Children(//body/main/div[4]/section/div/div/div/div[5]/div[1]/div[7]/div[2]/div[2]/div[1]/div[1]/div[1], div, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[7]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Children(//body/main/div[4]/section/div/div/div/div[5]/div[1]/div[8]/div[2]/div[2]/div[1]/div[1]/div[1], div, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[8]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='locatorMainInfo'][9], div, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[9]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(//div[@class='mainInfoContainer'][10], div, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[10]/div[2]/div[2]/div[1]/div[1]/div[3]
+ Click //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[11]/div/div[3]/button
+ While true do {
+  ForEach v0 in Descendants(, div[@class='locatorMainInfo'], 0) do {
+  ScrapeText <v0>//div[@class='streetAddress']
+  ScrapeText <v0>//div[@class='cityStateAddress']
+  ScrapeText <v0>/div[@class='listingPhoneNumber']
+  }
+  if valid(//div[@class='pagingHolder']//button[@class='sprite-next-page-arrow pagingButton ']) {
+  Click //div[@class='pagingHolder']//button[@class='sprite-next-page-arrow pagingButton ']
+  }
+ }
+ 
+ SendData //body/main/div[4]/section/div/div/div/div[1]/div/div[1]/div[2]/div[3]/div/div[1]/input inputs[2]
+ Click //body/div[13]/div/div[1]
+ ForEach v0 in Descendants(//div[@class='mainInfoContainer'][1], div, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/main/div[4]/section/div/div/div/div[5]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]
+ ForEach v0 in Descendants(, div[@class='locatorMainInfo'], 1) do {
+  ScrapeText <v0>//div[@class='streetAddress']
+  ScrapeText <v0>//div[@class='cityStateAddress']
+  ScrapeText <v0>/div[@class='listingPhoneNumber']
+ }",FALSE,N
+W243T1,1000,"ForEach v0 in Descendants(, div[@class='result-block'], 0) do {
+  ScrapeText <v0>//a[3]
+  ScrapeText <v0>//a[5]
+  ScrapeText <v0>//address
+ }",FALSE,N
+W246T1,1000,"ForEach v0 in Descendants(, div[@class='sg-col sg-col-4-of-12 sg-col-8-of-16 sg-col-12-of-20'], 0) do {
+  ScrapeText <v0>//span[@class='a-size-medium a-color-base a-text-normal']
+  ScrapeText <v0>//span[@class='a-size-base'][2]
+ }",FALSE,N
+W250T1,985,"While true do {
+  ForEach v0 in Children(//body/div[2]/div/div[1]/div[1]/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>/div/div/div[2]/h2/a
+  ForEach v0 in Children(<v0>/div/div/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>
+  }
+  }
+  if valid(//div[@class='pagination']//a[@class='next ajax-page']) {
+  Click //div[@class='pagination']//a[@class='next ajax-page']
+  }
+ }
+ 
+ ForEach v0 in Children(//body/div[3]/div/div[1]/div[1]/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>/div/div/div[2]/h2/a
+  ForEach v0 in Children(<v0>/div/div/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Descendants(, div[@data-impressed='1'], 0) do {
+  Click <v0>//a[@class='next ajax-page']
+  ForEach v0 in Children(//body/div[2]/div/div[1]/div[1]/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>/div/div/div[2]/h2/a
+  ForEach v0 in Children(<v0>/div/div/div[2]/div[2], div, 0) do {
+  ScrapeText <v0>
+  }
+  }
+ }",FALSE,N
+W263T1,1000,"ForEach v0 in Descendants(//div[@id='content'], a[@class='link-title'], 0) do {
+  Click <v0>
+  ScrapeText //div[@class='spaceit_pad'][1]
+  ScrapeText //div[@class='spaceit_pad'][2]
+  ScrapeText //div[@id='content']//div[@class='spaceit_pad'][3]
+  GoBack
+ }
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[6]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='contentWrapper'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[7]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='contentWrapper'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[8]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[9]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='content'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[10]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(, div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[11]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[12]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='content'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[13]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[14]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='content'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[15]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//div[@id='content'], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[16]/div[1]/div[1]/h2/a
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/div/div[6]
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], div[@class='spaceit_pad'], 1) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[17]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(, div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[18]/div[1]/div[1]/h2/a
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/div/div[7]
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/div/div[8]
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[19]/div[1]/div[1]/h2/a
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], div[@class='spaceit_pad'], 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W263T2,907,"ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/div[2]/div[2]/span[1]
+ ForEach v0 in Children(//span[@class='item'][2], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='seasonal-anime-list js-seasonal-anime-list js-seasonal-anime-list-key-1'][1], span[@class='genre'], 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div/h2/a
+ ScrapeLink //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/div[2]/ul/li[3]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[2]/div[2]/table/tbody/tr/td/table/tbody, tr, 0) do {
+  ScrapeText <v0>/td[3]/a
+  ScrapeText <v0>/td[3]/span
+  ScrapeText <v0>/td[4]
+ }
+ GoBack
+ GoBack
+ ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[4]/div[1]/div[2]/div[2]/span[1]
+ ForEach v0 in Descendants(//div[@class='info'][2], span, 2) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='genres js-genre'][2], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[4]/div[1]/div[1]/div/h2/a
+ ScrapeLink //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[4]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[4]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[4]/div[2]/table/tbody/tr/td[2]/div[1]/div[2]/ul/li[3]/a
+ ForEach v0 in Descendants(, tr[@class='episode-list-data'], 0) do {
+  ScrapeText <v0>//a[@class='fl-l fw-b ']
+  ScrapeText <v0>//span[@class='di-ib']
+  ScrapeText <v0>/td[@class='episode-aired nowrap']
+ }
+ GoBack
+ GoBack
+ ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[5]/div[1]/div[2]/div[2]/span[1]
+ ForEach v0 in Children(//span[@class='item'][15], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@id='46569'], span[@class='genre'], 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div/h2/a
+ ScrapeLink //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/div[2]/ul/li[3]/a
+ ForEach v0 in Descendants(, tr[@class='episode-list-data'], 0) do {
+  ScrapeText <v0>//a[@class='fl-l fw-b ']
+  ScrapeText <v0>//span[1]
+  ScrapeText <v0>/td[@class='episode-aired nowrap']
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[2]/div[2]/table/tbody/tr/td/table/tbody/tr[3]/td[4]",FALSE,N
+W267T1,1000,"While true do {
+  ForEach v0 in Children(//body/div[1]/div[1]/div[1]/div[2]/div[2]/div/div[3]/div/div/div/div/div[1]/div/div[2]/ul, div, 0) do {
+  ScrapeText <v0>/div/div/div[4]/div/a/div
+  ScrapeText <v0>/div/div/div[4]/div/div[2]
+  }
+  if valid(//div[@class='jsx-372421607 paginatorWrapper']//a[@aria-label='Go to next page']) {
+  Click //div[@class='jsx-372421607 paginatorWrapper']//a[@aria-label='Go to next page']
+  }
+ }",FALSE,N
+W278T1,1000,"ScrapeText //body/div[1]/div[3]/div[2]/div/div/form/div[3]/div[5]/div[2]/a
+ ScrapeText //body/div[1]/div[3]/div[2]/div/div/form/div[3]/div[5]/div[5]/span
+ ScrapeText //body/div[1]/div[3]/div[2]/div/div/form/div[3]/div[6]/div[2]/a
+ ScrapeText //body/div[1]/div[3]/div[2]/div/div/form/div[3]/div[6]/div[5]/span[1]
+ ForEach v0 in Descendants(, div[@class='table-tr '], 2) do {
+  ScrapeText <v0>//a[@class='link-domain-name ']
+  ScrapeText <v0>//span[4]
+ }",FALSE,N
+W301T1,1000,"ForEach v0 in Descendants(//div[@id='ls-gen10-ls-area-body'], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='ls-cmp-wrap ls-1st'][4], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='drawer'][2], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='stacked-table'][2], td[@data-header='Prices'], 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='stacked-table'][3], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='notop'][2], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='rtable dload'], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='rtable dload'], td, 2) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[3]/th/table/tbody/tr, td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[4]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[4]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[5]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[5]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[6]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[6]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[7]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[7]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[8]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[4]/div/div[1]/div/div/div/div[1]/div/div/div/section[3]/div/div/div[2]/div/div[3]/div/div/table/tbody/tr[8]/th/table/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }",FALSE,N
+W302T1,1000,"ForEach v0 in Descendants(//div[@id='main-content-full-width'], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@id='main-content-full-width'], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div[2]/div/div[2]/div/section/div[3]/table/tbody/tr[1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][2], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div[2]/div/div[2]/div/section/div[4]/table/tbody/tr[1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][3], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][4], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][4], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][5], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][5], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][6], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][6], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div[2]/div/div[2]/div/section/div[8]/table/tbody/tr[1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][7], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][8], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][8], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][9], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][9], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='table-responsive'][10], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][10], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][11], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][11], td, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div[2]/div/div[2]/div/section/table[1]/thead/tr/th
+ ForEach v0 in Descendants(//table[@class='matrix-table'][12], td, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div[2]/div/div[2]/div/section/table[2]/tbody/tr[1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][13], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][14], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][14], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][15], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='matrix-table'][15], td, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W303T1,1000,"ForEach v0 in Descendants(//table[@class='mod-ui-table mod-ui-table--freeze-pane'][1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//section[@data-o-grid-colspan='12 L8'][1], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@data-module-name='CurrenciesAndNewsApp'], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='mod-ui-table--freeze-pane__scroll-container'][2], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='mod-ui-tab-content mod-ui-tab-content--hidden-xsmall mod-content-and-news-app__content'][2], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='mod-ui-table mod-ui-table--freeze-pane'][3], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='mod-content-and-news-app mod-module__content'][3], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='mod-ui-table mod-ui-table--freeze-pane'][4], td, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W304T2,1000,"ForEach v0 in Descendants(, h2[@class='h2_anime_title'], 0) do {
+  Click <v0>/a[@class='link-title']
+  ScrapeText //div[@class='left-column fl-l divider'][1]//a[3]
+  ScrapeText //td[@class='va-t ar pl4 pr4'][2]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][3]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][4]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][5]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][6]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][7]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][8]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][9]/a
+  ScrapeText //td[@class='va-t ar pl4 pr4'][10]/a
+  GoBack
+ }
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[4]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[6]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[7]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[8]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[9]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[10]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }
+ GoBack
+ Click //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[11]/div[1]/div[1]/div/h2/a
+ ForEach v0 in Descendants(, td[@class='va-t ar pl4 pr4'], 0) do {
+  ScrapeText <v0>/a
+ }",FALSE,N
+W305T1,1000,"Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[2]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1], table, 0) do {
+  ForEach v0 in Children(<v0>/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+  }
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/table[1]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 1) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[3]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[4]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[4]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Descendants(, a[text()='Jigokuraku'], 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[5]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[6]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[7]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[8]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1], table, 0) do {
+  ForEach v0 in Children(<v0>/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[9]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[10]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[11]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[12]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[13]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[15]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[16]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[17]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[18]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[19]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[20]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[1]/tbody/tr/td[2]/a
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[1]/table[2]/tbody, tr, 0) do {
+  ScrapeText <v0>/td[2]/a
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[2]/a
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[21]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr, td, 0) do {
+  ForEach v0 in Children(<v0>, table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+  }
+ }
+ GoBack
+ GoBack
+ Click //body/div[1]/div[2]/div[4]/div[2]/div[3]/div[1]/div[22]/div[1]/div[1]/div/h2/a
+ Click //body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2]/div[1]/table/tbody/tr[3]/td/div[3]/div[1]/table[1]/tbody/tr/td[2]/h3
+ ForEach v0 in Descendants(//td[@class='borderClass'][1], a[text()='Otonari ni Ginga'], 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/div[2]/div[3]/div[2]/table/tbody/tr/td[2], table, 0) do {
+  ScrapeText <v0>/tbody/tr/td[2]/a
+ }",FALSE,N
+W306T1,1000,"ForEach v0 in Descendants(, div[@class='js-anime-category-producer seasonal-anime js-seasonal-anime js-anime-type-all js-anime-type-1'], 0) do {
+  ScrapeText <v0>//h2[@class='h2_anime_title']
+  ForEach v0 in Descendants(<v0>, span[@class='genre'], 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[4]/div[1]/div[3]/div/span[3]
+ ScrapeText //body/div[1]/div[2]/div[3]/div[2]/div[3]/div[1]/div[50]/div[1]/div[1]/div/h2",FALSE,N
+W307T2,1000,"ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/h3/a
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/p[3]/a[1]
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/p[3], a, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/p[1]/span[1]
+ ForEach v0 in Children(//p[@class='text-muted '][1], span, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[2]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[2]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[2]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[4]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[4]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][4], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[5]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[5]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][5], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[6]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[6]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][6], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[7]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[7]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[7]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][8], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][8], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[9]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[9]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][9], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[10]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[10]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][10], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[11]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[11]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[11]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[12]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[12]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][12], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[13]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[13]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][13], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[14]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[14]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][14], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[15]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[15]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][15], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[16]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[16]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][16], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[17]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[17]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][17], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][18], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[20]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[20]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][20], span, 2) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][21], a, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[21]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[22]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[22]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][22], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[23]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[23]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][23], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[24]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[24]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][24], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][25], a, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][25], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[26]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[26]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][26], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[27]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[27]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[27]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[28]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[28]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][28], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[29]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[29]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][29], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[30]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[30]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][30], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[31]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[31]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[31]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[32]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[32]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][32], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[33]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[33]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][33], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[34]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[34]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][34], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[35]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[35]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][35], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[36]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[36]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][36], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[37]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[37]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][37], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[38]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[38]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][38], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[39]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[39]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][39], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[40]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[40]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][40], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[41]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[41]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][41], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[42]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[42]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][42], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[43]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[43]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][43], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[44]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[44]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[44]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[45]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[45]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][45], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[46]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[46]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[46]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[47]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[47]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][47], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[48]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[48]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][48], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[49]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[49]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[49]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][50], a, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][50], span, 2) do {
+  ScrapeText <v0>
+ }
+ Click //body/div[2]/div/div[2]/div[3]/div[1]/div/div[4]/a
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[1]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[2]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[2]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][2], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[3]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][3], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[4]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[4]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[4]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[5]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[5]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[5]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][6], a, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][6], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[7]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[7]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][7], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[8]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[8]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[8]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[9]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[9]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][9], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[10]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[10]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[10]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[11]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[11]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][11], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[12]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[12]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][12], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[13]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[13]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][13], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[14]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[14]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][14], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[15]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[15]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][15], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[16]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[16]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][16], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[17]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[17]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//p[@class='text-muted '][17], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/p[3], a, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item mode-advanced'][18], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/p[1]/span[4]
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[18]/div[3]/p[1]/span[5]
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/p[3], a, 2) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/p[1], span, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[19]/div[3]/p[1]/span[4]
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[20]/div[3]/h3/a
+ ForEach v0 in Children(//body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[20]/div[3]/p[3], a, 1) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//div[@class='lister-item-content'][20], span, 2) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div/div[2]/div[3]/div[1]/div/div[3]/div/div[20]/div[3]/p[1]/span[4]",FALSE,N
+W308T1,1000,"ForEach v0 in Children(//body/div[1]/main/div/div/div[1]/div[3]/article/div/div/table[1]/thead[1], tr, 0) do {
+  ForEach v0 in Children(<v0>, th, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Descendants(//div[@class='clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item'], td, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/div[1]/main/div/div/div[1]/div[3]/article/div/div/table[2]/thead[1], tr, 0) do {
+  ForEach v0 in Children(<v0>, th, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/main/div/div/div[1]/div[3]/article/div/div/table[2], tbody, 0) do {
+  ForEach v0 in Children(<v0>, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/main/div/div/div[1]/div[3]/article/div/div/table[3]/thead, tr, 0) do {
+  ForEach v0 in Children(<v0>, th, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Children(//body/div[1]/main/div/div/div[1]/div[3]/article/div/div/table[3]/tbody, tr, 0) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }",FALSE,N
+W309T1,935,"ForEach v0 in Descendants(//div[@class='faq__answer'][7], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Children(//body/main/section[1]/div/div[2]/ul/li[8]/div/table/tbody, tr, 1) do {
+  ForEach v0 in Children(<v0>, td, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ForEach v0 in Descendants(//table[@class='data-table__table'][1], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='data-table__table'][1], td, 2) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='data-table__table'][2], th, 0) do {
+  ScrapeText <v0>
+ }
+ ForEach v0 in Descendants(//table[@class='data-table__table'][2], td, 2) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W35T1,1000,"ForEach v0 in Children(//body/form/div[5]/main/section[2]/div/div/div/div, div, 0) do {
+  ScrapeText <v0>/p/strong
+  ForEach v0 in Children(<v0>/ul, li, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[4]/p/strong
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[4]/ul/li[1]
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][43], li, 1) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[5]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][44], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[8]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][45], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[9]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][46], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[11]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][47], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[12]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][48], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[15]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][49], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[16]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][50], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[18]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][51], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[19]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][52], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[22]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][53], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[23]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][54], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[25]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][55], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[26]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][56], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[29]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][57], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[30]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][58], li, 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/form/div[5]/main/section[2]/div/div/div/div/div[32]/p/strong
+ ForEach v0 in Descendants(//div[@class='col-xs-12 col-sm-6 col-md-3'][59], li, 0) do {
+  ScrapeText <v0>
+ }",FALSE,N
+W68T1,21,"Download //body/div/div[2]/div[1]/table/thead/tr[3]/td[2]/a[1]
+ ScrapeLink //body/div/div[2]/div[1]/table/thead/tr[3]/td[2]/a[2]
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[1], tr, 1) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }
+ Download //body/div/div[2]/div[1]/table/tbody[2]/tr[2]/td[2]/a[1]
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[2]/tr[2]/td[2], a, 1) do {
+  ScrapeLink <v0>
+ }
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[2], tr, 2) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[3], tr, 1) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[4], tr, 2) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[5], tr, 1) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }
+ ForEach v0 in Children(//body/div/div[2]/div[1]/table/tbody[6], tr, 1) do {
+  Download <v0>/td[2]/a[1]
+  ScrapeLink <v0>/td[2]/a[2]
+ }",FALSE,N
+W69T2,,,FALSE,N
+W74T1,1000,"ForEach v0 in Descendants(//ul[@class='years'], a, 0) do {
+  Click <v0>
+  ForEach v0 in Descendants(, tr[@class='catAgendaRow'], 0) do {
+  ScrapeLink <v0>//a[2]
+  }
+ }",FALSE,N
+W74T2,1000,"ForEach v0 in Descendants(//ul[@class='years'][1], a, 0) do {
+  Click <v0>
+  ForEach v0 in Descendants(, tr[@class='catAgendaRow'], 0) do {
+  ScrapeLink <v0>//a[2]
+  }
+ }",FALSE,N
+W7T1,159,"ForEach v0 in GetArray(.emails) do {
+  SendData //div[@class='input-group']/input[@class='form-control'] <v0>
+  Click //span[@class='input-group-btn']/button[@class='btn btn-primary btn-lg']
+  ScrapeText //div[@class='pwnTitle'][2]/h2
+ }",FALSE,N
+W7T2,1000,"ForEach v0 in GetArray(.emails) do {
+  SendData //div[@class='input-group']/input[@autocapitalize='off'] <v0>
+  Click //span[@class='input-group-btn']/button[@class='btn btn-primary btn-lg']
+  ScrapeText //div[@class='pwnTitle'][2]/h2
+ }",FALSE,N
+W82T1,1000,"ForEach v0 in Descendants(, div[@class='detail'], 0) do {
+  Click <v0>//a
+  ScrapeText //div[@class='overview-rating']/span[@class='overview-rating-average']
+  ScrapeText //div[@class='product-reviewer']/span[@class='product-reviewer-reviews black-link']
+  ScrapeText //div[@class='product-reviewer']/span[@class='product-reviewer-sold']
+  GoBack
+ }",FALSE,N
+W83T1,1000,"ForEach v0 in Descendants(//div[@data-index='1'][1], div[@class='price __resizeWatch'], 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[2]/div[1]/div[1]/div/div[2]/div[5]/div[2]/div[4]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div/div/div[2]/div[3]/div[2]
+ ForEach v0 in Descendants(, div[@class='comblock no_cpu active hacComplete linkStrategyBlackPriceHover linkStrategyUnderlinePrices offsiteArrowPartner offsiteControlOrder'], 1) do {
+  ForEach v0 in Descendants(<v0>, div[@class='price __resizeWatch'], 0) do {
+  ScrapeText <v0>
+  }
+ }",FALSE,N
+W8T2,1000,"SendKeys //body/div[1]/div[1]/header/div[1]/div[3]/div/form/div[1]/div/div/input iphone 4
+ Click //body/div[1]/div[1]/header/div[1]/div[3]/div/form/button
+ While true do {
+  ForEach v0 in Descendants(, div[@class='hz-Listing-group'], 0) do {
+  ScrapeText <v0>//h3[@class='hz-Listing-title']
+  ScrapeText <v0>//span[@class='hz-Listing-price hz-text-price-label']
+  }
+  if valid(//li[@class='hz-Breadcrumb'][1]/i[@class='hz-Icon hz-Icon--m hz-Icon--textSecondary hz-SvgIcon hz-SvgIconArrowRight']) {
+  Click //li[@class='hz-Breadcrumb'][1]/i[@class='hz-Icon hz-Icon--m hz-Icon--textSecondary hz-SvgIcon hz-SvgIconArrowRight']
+  }
+ }
+ 
+ Click //body/div[1]/div[1]/main/div/div[1]/nav/ol/li[1]/i",FALSE,N
+W8T3,1000,"SendKeys //body/div/div[1]/div/span/header/form/div/input iphone 4
+ Click //body/div/div[1]/div/span/header/form/div[1]/button[2]
+ ForEach v0 in Descendants(, div[@class='h-100 relative'], 0) do {
+  ScrapeText <v0>//div[@data-automation-id='product-price'][1]
+  ScrapeText //span[@class='w_V_DM'][5]/span[@data-automation-id='product-title']
+ }
+ ScrapeText //body/div/div[1]/div/div/div[2]/div/main/div/div[1]/div/div/span/div/div/div/div[2]/div/div[1]/div/div/div[3]/div[1]
+ ForEach v0 in Descendants(, div[@class='h-100 relative'], 0) do {
+  ScrapeText //span[@class='w_V_DM'][5]/span[@data-automation-id='product-title']
+  ScrapeText <v0>//div[@data-automation-id='product-price'][1]
+ }",FALSE,N
+W91T2,1000,"ForEach v0 in Descendants(, div[@class='gs_ri'], 0) do {
+  ScrapeText <v0>/h3[@class='gs_rt']
+  ScrapeLink <v0>/h3[@class='gs_rt']
+  ForEach v0 in Children(<v0>, div, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ Click //body/div/div[10]/div[2]/div[3]/div[3]/div[2]/center/table/tbody/tr/td[12]/a/span
+ ForEach v0 in Descendants(, div[@class='gs_ri'], 0) do {
+  ScrapeText <v0>/h3[@class='gs_rt']
+  ScrapeLink <v0>/h3[@class='gs_rt']
+  ForEach v0 in Children(<v0>, div, 0) do {
+  ScrapeText <v0>
+  }
+ }
+ ScrapeText //body/div/div[10]/div[2]/div[3]/div[2]/div[5]/div[2]/h3",FALSE,N
+W91T3,1000,"ScrapeText //body/div[1]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div/div[1]/div/div/div/div[1]/div/div[1]/div/a
+ ScrapeLink //body/div[1]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div/div[1]/div/div/div/div[1]/div/div[1]/div/a
+ ForEach v0 in Children(//ul[@class='nova-legacy-e-list nova-legacy-e-list--size-m nova-legacy-e-list--type-inline nova-legacy-e-list--spacing-none nova-legacy-v-publication-item__person-list'][1], li[@class='nova-legacy-e-list__item'], 0) do {
+  ScrapeText <v0>
+ }
+ ScrapeText //body/div[1]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div/div[1]/div/div/div/div[1]/div/div[2]/div/div[2]/ul/li[1]
+ ScrapeText //body/div[1]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/div/div/div[1]/div/div[2]/div/a
+ ScrapeLink //body/div[1]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div/div[2]/div/div/div/div[1]/div/div[2]/div/a
+ ForEach v0 in Children(//ul[@class='nova-legacy-e-list nova-legacy-e-list--size-m nova-legacy-e-list--type-inline nova-legacy-e-list--spacing-none nova-legacy-v-publication-item__person-list'][2], li[@class='nova-legacy-e-list__item'], 0) do {
+  ScrapeText <v0>
+ }",FALSE,N

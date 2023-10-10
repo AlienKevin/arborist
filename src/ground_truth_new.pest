@@ -1,0 +1,37 @@
+// Define the tokens
+SP         = _{ " " }
+STRING     = _{ (!("\r" | "\n") ~ ANY)+ }
+LPAREN     = _{ "(" }
+RPAREN     = _{ ")" }
+
+// Define the rules
+program = _{ SOI ~ statement ~ (NEWLINE+ ~ statement)* ~ NEWLINE* ~ EOI }
+
+statement = _{ unary_statement | nullary_statement | send_statement | while_statement | for_statement }
+
+unary_statement = { unary_op ~ SP ~ string }
+
+unary_op = { "Click" | "ScrapeText" | "Download" | "ScrapeLink" }
+
+nullary_statement = { nullary_op }
+
+nullary_op = { "ExtractURL" | "GoBack" }
+
+send_statement = { send_op ~ SP ~ string }
+
+send_op = { "SendKeys" | "SendData" }
+
+while_statement = { "Do" ~ NEWLINE ~ block ~ NEWLINE ~ PEEK_ALL ~ "While" ~ SP ~ string }
+
+for_statement = { "ForEach v in" ~ (!NEWLINE ~ ANY)* ~ NEWLINE ~ block }
+
+block = _{
+    // The first line in the block
+    PEEK_ALL ~ PUSH(SP+) ~ statement ~
+    // Subsequent lines in the block
+    (NEWLINE+ ~ PEEK_ALL ~ statement)* ~
+    // Remove the last layer of indentation from the stack when exiting the block
+    DROP
+}
+
+string = _{ STRING }

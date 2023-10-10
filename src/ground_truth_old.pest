@@ -1,0 +1,41 @@
+// Define the tokens
+WHITESPACE = _{ " " | "\t" | NEWLINE }
+SP         = _{ " " | "\t" | NEWLINE }
+STRING     = @{ (!NEWLINE ~ ANY)+ }
+LPAREN     = _{ "(" }
+RPAREN     = _{ ")" }
+LCURLY     = _{ "{" }
+RCURLY     = _{ "}" }
+
+// Define the rules
+program = _{ SOI ~ statement ~ statement* ~ EOI }
+
+statement = _{ unary_statement | nullary_statement | send_statement | while_statement | for_statement }
+
+unary_statement = ${ unary_op ~ SP ~ string }
+
+unary_op = { "Click" | "ScrapeText" | "Download" | "ScrapeLink" }
+
+nullary_statement = ${ nullary_op }
+
+nullary_op = { "ExtractURL" | "GoBack" }
+
+send_statement = ${ send_op ~ SP ~ string }
+
+send_op = { "SendKeys" | "SendData" }
+
+while_statement = { "While true do " ~ while_block }
+
+while_block = _{ LCURLY ~ block ~ if_statement ~ RCURLY }
+
+if_statement = { "if " ~ function_call ~ LCURLY ~ unary_statement ~ RCURLY }
+
+for_statement = { "ForEach" ~ "v" ~ ASCII_DIGIT ~ "in" ~ function_call ~ "do" ~ LCURLY ~ block ~ RCURLY }
+
+block = _{ SP* ~ statement ~ (SP* ~ statement)* ~ SP*}
+
+function_call = _{ function_name ~ LPAREN ~ ("()" | !RPAREN ~ ANY)+ ~ RPAREN }
+
+function_name = _{ "Descendants" | "Children" | "valid" | "GetArray" }
+
+string = _{ STRING }
