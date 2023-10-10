@@ -1,7 +1,19 @@
-# Configure Docker Desktop
-If you are using Docker Desktop, change the allocated disk space to **200GB** in the Docker preferences (Preferences -> Resources -> Disk).
+# Overview
+In this artifact, we included the implementation of our web automation program synthesizer called Arborist. We will evaluate its efficiency in synthesizing programs for challenging web automation tasks and compare it with state-of-the-art techniques. In the following, we first present benchmarks we used in our evaluation, then show instructions to reproduce our experiment.
 
-# Run main experiment
+# Benchmarks
+We collected 131 real-world benchmarks on web-automation tasks, with each benchmark stored in a folder with name WxTx. Each benchmark contains the following files/folder:
+* *.program: the ground truth web automation program.
+* script.py: the selenium program used to record the action trace and doms of the simulated user interactions on the doms.
+* trace.json: the json file contains a list of actions for completing the benchmark task. Each action contains its type, corresponding selectors, and the data if applicable.
+* doms/: the folder contain all website dom indexed from the starting website dom before applying the first action to the last website dom after applying the last action.
+
+# Evaluation Instructions
+
+## Configure Docker Desktop
+If you are using Docker Desktop, change the allocated disk space to **200GB** in the Docker preferences (Preferences -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors.
+
+## Run main experiment
 1. Pull and run the docker container for arborist:
 ```
 docker run -ti alienkevin/arborist
@@ -10,7 +22,7 @@ docker run -ti alienkevin/arborist
 2. Unzip test folder
 ```
 mkdir test
-tar -I pigz -xf test.tar.gz --directory tests
+tar -I pigz -xf tests.tar.gz --directory tests
 ```
 Ignore warnings like below:
 ```
