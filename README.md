@@ -24,7 +24,7 @@ docker run -ti alienkevin/arborist
 
 2. Unzip test folder
 ```
-mkdir test
+mkdir tests
 tar -I pigz -xf tests.tar.gz --directory tests
 ```
 Ignore warnings like below:
