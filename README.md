@@ -14,7 +14,9 @@ We packaged all code and data into a cross-platform Docker container that works 
 ## Setup Docker Desktop
 1. Install Docker Desktop if you haven't already from https://www.docker.com/products/docker-desktop/
 
-2. Change the allocated disk space to **200GB** in the preferences (Preferences -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors.
+2. Change the allocated disk space to **200GB** in the preferences (Settings -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors. See the below screenshot for steps:
+
+![Docker Desktop Configuration](media/configure-docker-desktop.png)
 
 ## Run main experiment
 1. Pull and run the docker container for arborist:
