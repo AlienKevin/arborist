@@ -8,35 +8,18 @@ import math
 
 # Read the CSV file into a DataFrame
 arborist_data = pd.read_csv('benchmark_summary.csv')
-# arborist_scale_data = pd.read_csv('rq3_result_77.csv')
-# arborist_sparsity_data = pd.read_csv('rq2_result_76_1-1000.csv')
-# arborist_sparsity_data2 = pd.read_csv('rq2_result_76_11-41.csv')
-# arborist_sparsity_data3 = pd.read_csv('rq2_result_76_61-91.csv')
-# arborist_sparsity_data4 = pd.read_csv('rq2_result_76_1001-1501.csv')
 wr_extended_data = pd.read_csv(
     'WebRobot-Experiment-Results - webrobot-extension-withheuristics-1s-RQ1.csv')
 wr_original_data = pd.read_csv(
     'WebRobot-Experiment-Results - webrobot-noextension-withheuristics-1s-RQ1.csv')
-include = ['W8T3', 'W308T1', 'W51T1', 'W48T1', 'W156T1', 'W112T1', 'W40T1', 'W56T1', 'W80T1', 'W307T2', 'W295T1', 'W239T2', 'W204T1', 'W110T2', 'W218T1', 'W239T1', 'W307T1', 'W6T1', 'W261T2', 'W253T1', 'W169T1', 'W228T3', 'W228T2', 'W218T2', 'W144T1', 'W120T1', 'W228T1', 'W91T2', 'W268T1', 'W49T1', 'W250T1', 'W303T1', 'W110T3', 'W302T1', 'W8T2', 'W8T1', 'W265T2', 'W265T1', 'W228T4', 'W274T1', 'W87T1', 'W133T1', 'W1T1', 'W138T1', 'W154T1', 'W232T2', 'W240T1', 'W99T1', 'W1T2', 'W284T1', 'W296T1', 'W162T1', 'W309T1', 'W178T1', 'W33T1', 'W263T2', 'W278T1', 'W134T1', 'W158T2', 'W189T1', 'W49T2', 'W34T2', 'W252T1', 'W158T1', 'W252T2', 'W25T1',
-           'W287T2', 'W237T1', 'W87T2', 'W34T3', 'W69T1', 'W232T1', 'W77T1', 'W34T1', 'W214T1', 'W226T1', 'W124T1', 'W287T1', 'W74T1', 'W139T1', 'W115T1', 'W304T2', 'W262T1', 'W173T1', 'W74T2', 'W304T1', 'W1T3', 'W164T1', 'W223T1', 'W141T1', 'W305T1', 'W148T1', 'W146T1', 'W233T1', 'W81T1', 'W125T1', 'W146T2', 'W263T1', 'W285T1', 'W190T1', 'W213T1', 'W157T1', 'W157T2', 'W276T1', 'W53T1', 'W127T1', 'W254T1', 'W88T1', 'W69T2', 'W54T2', 'W205T1', 'W91T3', 'W51T2', 'W18T1', 'W188T1', 'W14T1', 'W46T1', 'W52T1', 'W111T2', 'W7T2', 'W9T1', 'W50T1', 'W78T2', 'W111T1', 'W176T1', 'W177T1', 'W149T1', 'W3T1', 'W58T1', 'W149T2', 'W238T1', 'W38T1', 'W78T1', 'W7T1']
-include = [x for x in include if x not in ["W7T1", "W51T1", "W78T1"]]
-assert(len(include) == 131)
+
+include = ['W239T1', 'W254T1', 'W14T1', 'W149T1', 'W176T1', 'W296T1', 'W252T1', 'W188T1', 'W287T1', 'W232T1', 'W134T1', 'W164T1', 'W69T1', 'W77T1', 'W33T1', 'W54T2', 'W261T2', 'W173T1', 'W111T2', 'W302T1', 'W214T1', 'W263T1', 'W304T2', 'W228T2', 'W228T4', 'W78T2']
+
 arborist_data = arborist_data[arborist_data['name'].isin(include)]
-# arborist_scale_data = arborist_scale_data[arborist_scale_data['name'].isin(
-#     include)]
-# arborist_sparsity_data = arborist_sparsity_data[arborist_sparsity_data['name'].isin(
-#     include)]
-# arborist_sparsity_data2 = arborist_sparsity_data2[arborist_sparsity_data2['name'].isin(
-#     include)]
-# arborist_sparsity_data3 = arborist_sparsity_data3[arborist_sparsity_data3['name'].isin(
-#     include)]
-# arborist_sparsity_data4 = arborist_sparsity_data4[arborist_sparsity_data4['name'].isin(
-#     include)]
 wr_extended_data = wr_extended_data[wr_extended_data['benchmark ID'].isin(
     include)]
 wr_extended_data = wr_extended_data[wr_extended_data['benchmark ID'].isin(
     include)]
-# def parse_wr_data(data):
 
 
 def compute_percent(x, y):
@@ -92,7 +75,8 @@ def exp1a_plot(data1, data2, data3):
     include = data1['name'].values
     # count total number of included benchmarks
     total = len(include)
-    # pldi_n = 76
+    pldi_n = len(data1[data1['in_pldi'] == 'Y'])
+    print("pldi_n: " + str(pldi_n))
     print(f"total number of included benchmarks: {total}")
     # print(data1[data1['intend'] != 'Y'].to_string())
 
@@ -104,8 +88,8 @@ def exp1a_plot(data1, data2, data3):
     webrobot_extended_counts = [compute_percent(x, y) for (x, y) in
                                 [
         (counts2['count'].sum(), total),
-        (counts2['count'][1], 76),
-        (counts2['count'][0], total - 76)
+        (counts2['count'][1], pldi_n),
+        (counts2['count'][0], total - pldi_n)
     ]
     ]
     # parse wr data
@@ -115,8 +99,8 @@ def exp1a_plot(data1, data2, data3):
     webrobot_counts = [compute_percent(x, y) for (x, y) in
                        [
         (counts3['count'].sum(), total),
-        (counts3['count'][1], 76),
-        (counts3['count'][0], total - 76)
+        (counts3['count'][1], pldi_n),
+        (counts3['count'][0], total - pldi_n)
     ]
     ]
 
@@ -130,8 +114,8 @@ def exp1a_plot(data1, data2, data3):
     arborist_counts = [compute_percent(x, y) for (x, y) in
                        [
         (counts1['count'].sum(), total),
-        (counts1['count'][1], 76),
-        (counts1['count'][0], total - 76)
+        (counts1['count'][1], pldi_n),
+        (counts1['count'][0], total - pldi_n)
     ]
     ]
 
@@ -156,7 +140,7 @@ def exp1a_plot(data1, data2, data3):
 
     # Set the x-axis tick positions and labels
     x_tick_positions = [r for r in r2]
-    x_tick_labels = [f'All ({total})', 'Prior(76)', f'New ({total - 76})']
+    x_tick_labels = [f'All ({total})', f'Prior({pldi_n})', f'New ({total - pldi_n})']
     plt.xticks(x_tick_positions, x_tick_labels, fontsize=16)
 
     # Set the y-axis label
@@ -214,6 +198,11 @@ def exp1b_plot(data1, data2, data3):
     data1 = data1[(data1['intend'] == 'Y') | (data1['intend'] == 'N') | (
         data1['intend'] == 'YL') | (data1['in_pldi'] == 'Y')]
     include = data1['name'].values
+    total = len(include)
+    pldi_n = len(data1[data1['in_pldi'] == 'Y'])
+    print("pldi_n: " + str(pldi_n))
+    # pldi_n = 76
+    print(f"total number of included benchmarks: {total}")
     # print(data2['intended?'])
     filtered_data2 = parse_wr_data(data2, pldi_names, include)
     filtered_data3 = parse_wr_data(data3, pldi_names, include)
@@ -295,8 +284,7 @@ def exp1b_plot(data1, data2, data3):
 
     # Set the x-axis limits and labels
     x_tick_positions = [p + 0.5 for p in positions]
-    total = 131
-    x_tick_labels = [f'All ({total})', 'Prior(76)', f'New ({total - 76})']
+    x_tick_labels = [f'All ({total})', f'Prior({pldi_n})', f'New ({total - pldi_n})']
     plt.xticks(x_tick_positions, x_tick_labels, fontsize=font_size)
 
     # Adjust the position of the y-axis label
