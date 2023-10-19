@@ -16,11 +16,14 @@ Since the full dataset is very large, we also offer small and tiny versions for 
 of our benchmarks. However, due to the smaller sample sizes, the resulting graphs may look quite different from that of the full version
 we published in the paper. **We recommend that you pick the version that suits your device's storage capacity.** Here are the specification for the full, small, and tiny versions:
 
-| Version | Container Size | Docker Virtual Disk Limit | % Prior Benchmarks | # Prior Benchmarks | % New Benchmarks | # New Benchmarks |
+| Version | Container Size | Docker Virtual Disk Limit*| % Prior Benchmarks | # Prior Benchmarks | % New Benchmarks | # New Benchmarks |
 | ------- | -------------- | ------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
 | Full    | 8.4GB          | >=88GB                    | 100                | 76                 | 100              | 55               |
 | Small   | 4GB            | >=32GB                    | 20                 | 15                 | 20               | 11               |
-| Tiny    | ???            | ???                       | 10                 | 7                  | 10               | 5               |
+| Tiny    | ???            | ???                       | 10                 | 7                  | 10               | 5                |
+
+* Note: Docker Virtual Disk Limit is a global property that represents the **sum of all local containers' disks**. Therefore, the minimum value shown in the table assumes that you
+have no other containers stored locally. If you have other containers that also take up virtual disk space, you need to increase this limit.
 
 ## Setup Docker Desktop
 1. Install Docker Desktop if you haven't already from https://www.docker.com/products/docker-desktop/
