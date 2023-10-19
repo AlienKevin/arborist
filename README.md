@@ -14,13 +14,13 @@ We packaged all code and data into a cross-platform Docker container that works 
 
 Since the full dataset is very large, we also offer small and tiny versions for testing. We automatically generated the smaller versions by randomly sampling x% of prior benchmarks and x% of new benchmarks to capture the distribution
 of our benchmarks. However, due to the smaller sample sizes, the resulting graphs may look quite different from that of the full version
-we published in the paper. **We recommend that you pick the version that suits your device's storage capacity.** Here are the specification for the full, small, and tiny versions:
+we published in the paper. **We recommend that you pick the version that suits your device's storage capacity.** If system resource permits, we suggest using the small or full version because the sample size of tiny is too small. Here are the specification for the full, small, and tiny versions:
 
 | Version | Container Size | Docker Virtual Disk Limit*| % Prior Benchmarks | # Prior Benchmarks | % New Benchmarks | # New Benchmarks |
 | ------- | -------------- | ------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
 | Full    | 8.4GB          | >=88GB                    | 100                | 76                 | 100              | 55               |
 | Small   | 4GB            | >=32GB                    | 20                 | 15                 | 20               | 11               |
-| Tiny    | ???            | ???                       | 10                 | 7                  | 10               | 5                |
+| Tiny    | 3.6GB          | >=8GB                    | 10                 | 7                  | 10               | 5                |
 
 * Note: Docker Virtual Disk Limit is a global property that represents the **sum of all local containers' disks**. Therefore, the minimum value shown in the table assumes that you
 have no other containers stored locally. If you have other containers that also take up virtual disk space, you need to increase this limit.
@@ -65,7 +65,7 @@ have no other containers stored locally. If you have other containers that also 
     ```
     make main
     ```
-    For the full version, the main experiment takes around 40 minutes wall-clock time on an M1 Max MacBook Pro. Smaller versions generally run much faster.
+    For the full version, the main experiment takes around 40 minutes wall-clock time on an M1 Max MacBook Pro. The small version took around 4 minutes and the tiny version took around 2 minutes 20 seconds.
 
 4. **In your container's terminal**, plot the experiment results
     ```

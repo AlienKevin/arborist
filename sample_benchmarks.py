@@ -1,4 +1,12 @@
 import random
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python script.py <sample_percent>")
+    print("Example: python sample_benchmarks.py 0.1")
+    sys.exit(1)
+
+sample_percent = float(sys.argv[1])
 
 random.seed(0)
 
@@ -18,14 +26,14 @@ pldi_benchmarks = [
 assert(len(pldi_benchmarks) == 76)
 
 # sample 10% of pldi benchmarks
-num_sampled_pldi = int(len(pldi_benchmarks) * 0.2)
+num_sampled_pldi = int(len(pldi_benchmarks) * sample_percent)
 sampled_pldi_benchmarks = random.sample(pldi_benchmarks, num_sampled_pldi)
 assert(len(sampled_pldi_benchmarks) == num_sampled_pldi)
 print(f"Sampled {num_sampled_pldi} PLDI benchmarks")
 
 # sample 10% of new benchmarks
 new_benchmarks = [x for x in include if x not in pldi_benchmarks]
-num_sampled_new = int(len(new_benchmarks) * 0.2)
+num_sampled_new = int(len(new_benchmarks) * sample_percent)
 sampled_new_benchmarks = random.sample(new_benchmarks, num_sampled_new)
 assert(len(sampled_new_benchmarks) == num_sampled_new)
 print(f"Sampled {num_sampled_new} new benchmarks")

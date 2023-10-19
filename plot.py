@@ -13,7 +13,7 @@ wr_extended_data = pd.read_csv(
 wr_original_data = pd.read_csv(
     'WebRobot-Experiment-Results - webrobot-noextension-withheuristics-1s-RQ1.csv')
 
-include = ['W239T1', 'W254T1', 'W14T1', 'W149T1', 'W176T1', 'W296T1', 'W252T1', 'W188T1', 'W287T1', 'W232T1', 'W134T1', 'W164T1', 'W69T1', 'W77T1', 'W33T1', 'W54T2', 'W261T2', 'W173T1', 'W111T2', 'W302T1', 'W214T1', 'W263T1', 'W304T2', 'W228T2', 'W228T4', 'W78T2']
+include = ['W239T1', 'W254T1', 'W14T1', 'W149T1', 'W176T1', 'W296T1', 'W252T1', 'W51T2', 'W78T2', 'W228T4', 'W252T2', 'W1T2']
 
 arborist_data = arborist_data[arborist_data['name'].isin(include)]
 wr_extended_data = wr_extended_data[wr_extended_data['benchmark ID'].isin(
