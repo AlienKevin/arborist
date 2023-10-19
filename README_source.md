@@ -10,47 +10,94 @@ We collected 131 real-world benchmarks on web-automation tasks, with each benchm
 - doms/: the folder contain all website dom indexed from the starting website dom before applying the first action to the last website dom after applying the last action.
 
 # Evaluation Instructions
-We packaged all code and data into a cross-platform Docker container that works for both x86 and arm host machines.
+We packaged all code and data into a cross-platform Docker container that works for both x86 and arm host machines. You do not need to download the Zenodo repository as our Docker container published on the Docker Hub contains everything you need. We will show you detailed steps on how to obtain and run that container in the Run Main Experiment section.
+
+Since the full dataset is very large, we also offer small and tiny versions for testing. We automatically generated the smaller versions by randomly sampling x% of prior benchmarks and x% of new benchmarks to capture the distribution
+of our benchmarks. However, due to the smaller sample sizes, the resulting graphs may look quite different from that of the full version
+we published in the paper. **We recommend that you pick the version that suits your device's storage capacity.** Here are the specification for the full, small, and tiny versions:
+
+| Version | Container Size | Docker Virtual Disk Limit | % Prior Benchmarks | # Prior Benchmarks | % New Benchmarks | # New Benchmarks |
+| ------- | -------------- | ------------------------- | ------------------ | ------------------ | ---------------- | ---------------- |
+| Full    | 8.4GB          | >=88GB                    | 100                | 76                 | 100              | 55               |
+| Small   | 4GB            | >=32GB                    | 20                 | 15                 | 20               | 11               |
+| Tiny    | ???            | ???                       | 10                 | 7                  | 10               | 5               |
 
 ## Setup Docker Desktop
 1. Install Docker Desktop if you haven't already from https://www.docker.com/products/docker-desktop/
 
-2. Change the allocated disk space to **200GB** in the preferences (Settings -> Resources -> Disk). Docker won't necessarily use all 200GB but this amount is required to prevent out of memory errors. See Figure 1 on the next page for the steps.
+2. Set the "Docker Virtual Disk Limit" value to be at least the minimum listed in the table above for the container version you are using.
+   Go to Settings -> Resources -> Virtual Disk Limit and drag the slider to the desired value. Hit Apply & Restart to apply the changes.
 
 ![Docker Desktop Configuration](media/configure-docker-desktop.png)
 
-## Run main experiment
-1. Pull and run the docker container for arborist:
-```
-docker run -ti alienkevin/arborist
-```
+## Run Main Experiment
+1. Pull and run the docker container for arborist. Use the command for your container version.
+    * Full version:
+    ```
+    docker run -ti alienkevin/arborist
+    ```
+    * Small version:
+    ```
+    docker run -ti alienkevin/arborist-small
+    ```
+    * Tiny version:
+    ```
+    docker run -ti alienkevin/arborist-tiny
+    ```
 
-2. Unzip test folder
-```
-mkdir tests
-tar -I pigz -xf tests.tar.gz
-```
-Ignore warnings like below:
-```
-tar: Ignoring unknown extended header keyword 'SCHILY.fflags'
-tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.FinderInfo'
-tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.lastuseddate#PS'
-...
-```
+2. **In your container's terminal**, unzip test folder
+    ```
+    mkdir tests
+    tar -I pigz -xf tests.tar.gz
+    ```
+    Ignore warnings like below:
+    ```
+    tar: Ignoring unknown extended header keyword 'SCHILY.fflags'
+    tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.FinderInfo'
+    tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.lastuseddate#PS'
+    ...
+    ```
 
-3. Run the main experiment
-```
-make main
-```
+3. **In your container's terminal**, run the main experiment
+    ```
+    make main
+    ```
+    For the full version, the main experiment takes around 40 minutes wall-clock time on an M1 Max MacBook Pro. Smaller versions generally run much faster.
 
-The main experiment takes around 40 minutes wall-clock time on an M1 Max MacBook Pro.
+4. **In your container's terminal**, plot the experiment results
+    ```
+    python plot.py
+    ```
+    Depending on which container version you choose, you will see different graphs. Here are the outputs that you can expect for each version produced by an M1 Max Macbook Pro. Note that the outputs depend on your machine's processing power so you may get slightly different results on a faster/slower machine.
+    * Full version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-full.png" alt="Full Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-full.png" alt="Full Version - Synthesis Times" width="300" />
+            </div>
+        </div>
+    * Full version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-small.png" alt="Small Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-small.png" alt="Small Version - Synthesis Times" width="300" />
+            </div>
+        </div>
+    * Full version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-tiny.png" alt="Tiny Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-tiny.png" alt="Tiny Version - Synthesis Times" width="300" />
+            </div>
+        </div>
 
-4. Plot the experiment results
-```
-python plot.py
-```
-
-5. Export results to host machine. (Below steps all happens on your host machine's terminal, not the container's terminal)
+5. Export results to host machine. (Below steps all happens **on your host machine's terminal**, not the container's terminal)
 
     a. First get the name of the container running under the NAMES column:
     ```
