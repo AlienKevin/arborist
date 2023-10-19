@@ -70,39 +70,35 @@ we published in the paper. **We recommend that you pick the version that suits y
     ```
     Depending on which container version you choose, you will see different graphs. Here are the outputs that you can expect for each version produced by an M1 Max Macbook Pro. Note that the outputs depend on your machine's processing power so you may get slightly different results on a faster/slower machine.
 
-<ul>
-<li>Full version's expected graphs:
-<div style="display: flex;">
-    <div style="flex: 1;">
-        <img src="media/RQ1-benchmarks-solved-full.png" alt="Full Version - Benchmarks Solved" width="300" />
-    </div>
-    <div style="flex: 1;">
-        <img src="media/RQ1-synthesis-times-full.png" alt="Full Version - Synthesis Times" width="300" />
-    </div>
-</div>
+    * Full version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-full.png" alt="Full Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-full.png" alt="Full Version - Synthesis Times" width="300" />
+            </div>
+        </div>
 
-<li>Small version's expected graphs:
-<div style="display: flex;">
-    <div style="flex: 1;">
-        <img src="media/RQ1-benchmarks-solved-small.png" alt="Small Version - Benchmarks Solved" width="300" />
-    </div>
-    <div style="flex: 1;">
-        <img src="media/RQ1-synthesis-times-small.png" alt="Small Version - Synthesis Times" width="300" />
-    </div>
-</div>
-</li>
+    * Small version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-small.png" alt="Small Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-small.png" alt="Small Version - Synthesis Times" width="300" />
+            </div>
+        </div>
 
-<li>Tiny version's expected graphs:
-<div style="display: flex;">
-    <div style="flex: 1;">
-        <img src="media/RQ1-benchmarks-solved-tiny.png" alt="Tiny Version - Benchmarks Solved" width="300" />
-    </div>
-    <div style="flex: 1;">
-        <img src="media/RQ1-synthesis-times-tiny.png" alt="Tiny Version - Synthesis Times" width="300" />
-    </div>
-</div>
-</li>
-</ul>
+    * Tiny version's expected graphs:
+        <div style="display: flex;">
+            <div style="flex: 1;">
+                <img src="media/RQ1-benchmarks-solved-tiny.png" alt="Tiny Version - Benchmarks Solved" width="300" />
+            </div>
+            <div style="flex: 1;">
+                <img src="media/RQ1-synthesis-times-tiny.png" alt="Tiny Version - Synthesis Times" width="300" />
+            </div>
+        </div>
 
 
 5. Export results to host machine. (Below steps all happens **on your host machine's terminal**, not the container's terminal)
